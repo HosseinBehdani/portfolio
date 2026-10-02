@@ -1,0 +1,187 @@
+{
+    "meta": {
+        "language": "fa",
+        "direction": "rtl"
+    },
+    "common": {
+        "downloadResume": "دانلود رزومه",
+        "viewProject": "مشاهده پروژه",
+        "viewCode": "مشاهده کد",
+        "liveDemo": "مشاهده دمو",
+        "readMore": "بیشتر بخوانید",
+        "contactMe": "تماس با من",
+        "sendMessage": "ارسال پیام",
+        "seeAll": "مشاهده همه",
+        "menu": "منو",
+        "language": "زبان",
+        "theme": "تم",
+        "frameworks": "فریمورک‌ها"
+    },
+    "navigation": {
+        "home": "خانه",
+        "about": "درباره من",
+        "skills": "مهارت‌ها",
+        "experience": "تجربه کاری",
+        "projects": "پروژه‌ها",
+        "certificates": "گواهینامه‌ها",
+        "contact": "تماس"
+    },
+    "theme": {
+        "light": "حالت روشن",
+        "dark": "حالت تاریک",
+        "switchToLight": "تغییر به حالت روشن",
+        "switchToDark": "تغییر به حالت تاریک"
+    },
+    "language": {
+        "persian": "فارسی",
+        "english": "English"
+    },
+    "framework": {
+        "angular": "Angular",
+        "react": "React",
+        "nextjs": "Next.js"
+    },
+    "hero": {
+        "greeting": "سلام، من",
+        "firstName": "حسین",
+        "lastName": "بهدانی",
+        "nameSuffix": "هستم",
+        "role": "توسعه‌دهنده فرانت‌اند",
+        "description": "من اپلیکیشن‌های وب سریع، مقیاس‌پذیر و زیبا را با تکنولوژی‌های مدرن فرانت‌اند می‌سازم.",
+        "downloadResume": "دانلود رزومه",
+        "buildWith": "ساخته شده با",
+        "angular": "Angular"
+    },
+    "profile": {
+        "name": "حسین بهدانی",
+        "role": "توسعه‌دهنده فرانت‌اند",
+        "availability": "آماده همکاری"
+    },
+    "about": {
+        "title": "درباره من",
+        "paragraph1": "علاقم به برنامه‌نویسی از کنجکاوی برای ساختن و یاد گرفتن شروع شد و کم‌کم من رو به دنیای توسعه وب کشوند. الان بیشتر روی فرانت‌اند تمرکز دارم و از ساخت رابط‌های کاربری مدرن، واکنش‌گرا و کاربرپسند لذت می‌برم.",
+        "paragraph2": "با Next, React, Typescript و Angular کار می‌کنم. این سایت جایی هست که پروژه‌ها و مسیر یادگیریم رو به اشتراک میزارم و با هر چالش جدید سعی می‌کنم مهارت‌هام رو بهتر کنم."
+    },
+    "status": {
+        "title": "وضعیت من",
+        "projectsCompleted": "پروژه‌های تکمیل‌ شده",
+        "yearsExperience": "سال‌های تجربه",
+        "responsiveDesign": "طراحی واکنش‌ گرا",
+        "gitRepositories": "مخازن گیت"
+    },
+    "skills": {
+        "title": "مهارت‌ها و تکنولوژی‌ها"
+    },
+    "experience": {
+        "title": "تجربه کاری",
+        "employmentType": "هیبرید",
+        "company": "دانشجویار",
+        "startDate": "مهر ۱۴۰۳ -",
+        "present": "تاکنون",
+        "role": "توسعه‌دهنده فرانت‌اند",
+        "responsibilities": [
+            "در توسعه فرانت‌اند وب‌سایت‌های پارک علم و فناوری بیرجند، مرکز توانبخشی علی‌اکبر و لوازم یدکی احمدی مشارکت داشتم.",
+            "طرح‌های رابط کاربری طراحی‌شده در Figma رو با استفاده از HTML، CSS، Bootstrap و JavaScript به صفحات وب واکنش‌گرا تبدیل کردم.",
+            "رابط‌های کاربری واکنش‌گرا و تعاملی رو برای دستگاه‌های دسکتاپ و موبایل پیاده‌سازی کردم.",
+            "با اعضای تیم با استفاده از Git و GitHub همکاری کردم و مهارت‌های کار تیمی و شبکه‌سازی حرفه‌ای خودم رو توسعه دادم.",
+            "به‌ عنوان کمک‌مربی و مربی در دانشجویار فعالیت کردم، به یادگیرندگان در مسیر یادگیری کمک کردم و دانش عملی خودم رو در زمینه توسعه فرانت‌اند با آن‌ها به اشتراک گذاشتم."
+        ]
+    },
+    "projects": {
+        "title": "پروژه‌ها",
+        "liveSite": "مشاهده سایت",
+        "github": "گیت‌هاب",
+        "scienceAndTechnologyPark": {
+            "title": "پارک علم و فناوری خراسان جنوبی"
+        },
+        "aliAkbarRehabilitation": {
+            "title": "توانبخشی علی اکبر"
+        },
+        "ahmadiSpareParts": {
+            "title": "لوازم یدکی احمدی"
+        }
+    },
+    "certificates": {
+        "title": "گواهینامه‌ها",
+        "credential": "گواهی",
+        "items": [
+            {
+                "name": "Java",
+                "year": 2026,
+                "logo": "assets/images/dotinschool.webp",
+                "credentialUrl": "#"
+            },
+            {
+                "name": "Java Intermediate",
+                "year": 2026,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-0D8XQHU1"
+            },
+            {
+                "name": "Introduction to Java",
+                "year": 2026,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-WCXO3HDK"
+            },
+            {
+                "name": "Angular",
+                "year": 2026,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-4CCHY0K9"
+            },
+            {
+                "name": "TypeScript for Beginners",
+                "year": 2026,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-MH4M1LSH"
+            },
+            {
+                "name": "JavaScript Intermediate",
+                "year": 2025,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-JWLEERH8"
+            },
+            {
+                "name": "Introduction to JavaScript",
+                "year": 2025,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-FKQTWCTI"
+            },
+            {
+                "name": "Introduction to CSS",
+                "year": 2025,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-ZR9I87AF"
+            },
+            {
+                "name": "Introduction to HTML",
+                "year": 2025,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-AOOIX7MS"
+            }
+        ]
+    },
+    "contact": {
+        "title": "بیایید با هم کار کنیم",
+        "email": "ایمیل",
+        "phone": "شماره تماس",
+        "location": "موقعیت",
+        "locationValue": "تهران، ایران",
+        "linkedin": "لینکدین",
+        "github": "گیت‌هاب",
+        "namePlaceholder": "نام شما",
+        "emailPlaceholder": "ایمیل شما",
+        "subjectPlaceholder": "موضوع",
+        "messagePlaceholder": "پیام شما",
+        "sendMessage": "ارسال پیام",
+        "submitting": "در حال ارسال...",
+        "successMessage": "پیام با موفقیت ارسال شد.",
+        "errorMessage": "مشکلی پیش آمد. دوباره تلاش کنید."
+    },
+    "footer": {
+        "role": "توسعه‌دهنده فرانت‌اند",
+        "description": "ساخت تجربه‌های وب مدرن، زیبا و کاربرمحور.",
+        "techStack": "تکنولوژی‌ها",
+        "copyright": "© ۱۴۰۵ حسین بهدانی. تمامی حقوق محفوظ است."
+    }
+}

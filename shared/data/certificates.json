@@ -1,0 +1,32 @@
+[
+    {
+        "id": "java-dotin-school",
+        "titleKey": "certificates.javaDotinSchool.title",
+        "issuer": "Dotin School",
+        "date": "2026"
+    },
+    {
+        "id": "javascript-intermediate-sololearn",
+        "titleKey": "certificates.javascriptIntermediateSololearn.title",
+        "issuer": "SoloLearn",
+        "date": "2025"
+    },
+    {
+        "id": "javascript-sololearn",
+        "titleKey": "certificates.javascriptSololearn.title",
+        "issuer": "SoloLearn",
+        "date": "2025"
+    },
+    {
+        "id": "css-sololearn",
+        "titleKey": "certificates.cssSololearn.title",
+        "issuer": "SoloLearn",
+        "date": "2025"
+    },
+    {
+        "id": "html-sololearn",
+        "titleKey": "certificates.htmlSololearn.title",
+        "issuer": "SoloLearn",
+        "date": "2025"
+    }
+]

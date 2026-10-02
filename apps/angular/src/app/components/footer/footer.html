@@ -1,0 +1,123 @@
+<footer class="border-t border-[#12345A]/70 dark:border-[#1D4F7A]/70 mt-3 lg:mt-0">
+    <div class="px-3 lg:px-6 py-4 sm:py-3 ">
+        <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr] gap-4 sm:gap-5 md:gap-6 items-center">
+            <div class="flex items-center justify-center lg:justify-start gap-3 sm:gap-3.5 md:gap-4">
+                <div class="shrink-0">
+                    <img src="assets/images/Logo.webp" alt="MyPortfolio" class="w-22 sm:w-23 md:w-25 lg:w-25 object-contain" width="1774" height="887">
+                </div>
+                <div class="min-w-0">
+                    <h2 class="text-[15px] sm:text-base md:text-[17px] font-bold text-slate-900 dark:text-white">
+                        {{ languageService.translations.footer.role }}
+                    </h2>
+                    <p class="mt-0.5 text-[12px] sm:text-[13px] md:text-[14px] text-slate-500 dark:text-slate-400">
+                        {{ languageService.translations.footer.description }}
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:items-center">
+                <h3 class="text-[15px] sm:text-base md:text-[17px] lg:text-base font-semibold text-slate-700 dark:text-slate-300">
+                    {{ languageService.translations.footer.techStack }}
+                </h3>
+                <div class="flex items-center justify-center gap-2 sm:gap-2.5 md:gap-2.5 mt-2">
+                    <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" aria-label="Git" class="flex items-center justify-center size-10 sm:size-10 md:size-10 lg:size-10 rounded-md border border-[#12345A] dark:border-[#1D4F7A]">
+                        <svg class="size-5 sm:size-6 md:size-6 lg:size-6 text-[#F05032]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 600 600">
+                            <g clip-path="url(#devicon-git-icon-1-a)">
+                                <path fill="currentColor"
+                                    d="m588.7 273.3-262-262c-15-15-39.5-15-54.6 0l-54.4 54.4 69 69a45.9 45.9 0 0 1 58 58.5l66.6 66.5a46 46 0 1 1-27.5 26l-62-62v163.1q6.5 3.3 12 8.7a46 46 0 1 1-49.9-10V220.8a46 46 0 0 1-25-60.3l-68-68L11.3 272a38.6 38.6 0 0 0 0 54.6l262 262c15 15 39.5 15 54.6 0l260.8-260.8c15-15 15-39.5 0-54.6" />
+                            </g>
+                            <defs>
+                                <clipPath id="devicon-git-icon-1-a">
+                                    <path fill="#fff" d="M0 0h600v600H0z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" aria-label="Tailwind CSS" class="flex items-center justify-center size-10 sm:size-10 md:size-10 lg:size-10 rounded-md border border-[#12345A] dark:border-[#1D4F7A]">
+                        <svg class="size-5 sm:size-6 md:size-6 lg:size-6 text-[#06B6D4]" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 600 600">
+                            <path fill="url(#devicon-tailwind-icon-1-a)"
+                                d="M300 120q-120 0-150 120 45-60 105-45c22.8 5.7 39.1 22.3 57.2 40.6C341.6 265.4 375.6 300 450 300q120 0 150-120-45 60-105 45c-22.8-5.7-39.1-22.3-57.2-40.6C408.4 154.6 374.4 120 300 120M150 300Q30 300 0 420q45-60 105-45c22.8 5.7 39.1 22.3 57.2 40.6C191.6 445.4 225.6 480 300 480q120 0 150-120-45 60-105 45c-22.8-5.7-39.1-22.3-57.2-40.6C258.4 334.6 224.4 300 150 300" />
+                            <defs>
+                                <linearGradient id="devicon-tailwind-icon-1-a" x1="-1666.7" x2="50153.2" y1="11640"
+                                    y2="41518.1" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#2298BD" />
+                                    <stop offset="1" stop-color="#0ED7B5" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" aria-label="TypeScript" class="flex items-center justify-center size-10 sm:size-10 md:size-10 lg:size-10 rounded-md border border-[#12345A] dark:border-[#1D4F7A]">
+                        <svg class="size-5 sm:size-6 md:size-6 lg:size-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 600 600">
+                            <g clip-path="url(#devicon-typescript-icon-1-a)">
+                                <path fill="#3178C6"
+                                    d="M46.9 0H553c26 0 46.9 21 46.9 46.9V553c0 26-21 46.9-46.9 46.9H47C20.9 600 0 579 0 553.1V47C0 20.9 21 0 46.9 0" />
+                                <path fill="#fff"
+                                    d="M352.8 469.9v64.7q15.8 8 37.3 12.1 21.6 4 45.5 4 23.3 0 44.2-4.4t36.8-14.6a75 75 0 0 0 25-26.7q9.2-16.5 9.2-40.8 0-17.6-5.3-30.8a72 72 0 0 0-15.2-23.6q-9.9-10.3-23.8-18.5a255 255 0 0 0-31.2-15.5 395 395 0 0 1-23-10.2 116 116 0 0 1-17.1-10.1 44 44 0 0 1-11-11 23 23 0 0 1-3.8-13q0-6.7 3.4-12 3.5-5.4 9.8-9.2a52 52 0 0 1 15.3-6q9.2-2.1 20.3-2.1a129 129 0 0 1 35.2 5q9 2.4 17.7 6.3t16 8.9v-60.5q-15-5.7-32.4-8.4t-40.2-2.7q-23 0-43.7 5a111 111 0 0 0-36.3 15.4q-15.8 10.6-24.8 26.8a79 79 0 0 0-9.1 39q0 28.8 16.7 49.3T419 421q13.3 5.5 24.9 10.7 11.5 5.3 20 11 8.3 5.5 13.2 12.3a25 25 0 0 1 1.8 26.8 27 27 0 0 1-9.2 9.3 51 51 0 0 1-15.4 6.2 93 93 0 0 1-21.6 2.2 123 123 0 0 1-80-29.5m-108-161.1H328v-53.3H96v53.3h82.8V546h66z" />
+                            </g>
+                            <defs>
+                                <clipPath id="devicon-typescript-icon-1-a">
+                                    <path fill="#fff" d="M0 0h600v600H0z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" aria-label="React" class="flex items-center justify-center size-10 sm:size-10 md:size-10 lg:size-10 rounded-md border border-[#12345A] dark:border-[#1D4F7A]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5 sm:size-6 md:size-6 lg:size-6 text-[#61DAFB]" fill="none"
+                            viewBox="0 0 600 600">
+                            <path fill="#00D8FF"
+                                d="M493.3 206.1q-9.3-3.2-19.3-6l3-13.2c14.6-71 5-128.2-27.6-147-31.3-18-82.5.7-134.2 45.7q-7.5 6.6-15 13.7l-9.9-9.1c-54.1-48.1-108.5-68.4-141-49.5-31.3 18-40.6 71.8-27.4 139q1.8 9.8 4.4 20-11.5 3.2-22.2 7C40.6 228.6 0 263.4 0 299.4c0 37.2 43.6 74.5 109.7 97q7.9 2.8 16.2 5.2-2.7 11-4.7 21.4c-12.5 66-2.7 118.6 28.5 136.5 32.2 18.6 86.2-.5 138.9-46.5q6.2-5.4 12.5-11.5 8.1 7.8 16.2 14.8c51 43.8 101.4 61.6 132.5 43.5 32.2-18.6 42.7-75 29.1-143.6q-1.5-7.9-3.6-16l11.2-3.5C555.2 374 600 337.2 600 299.5c0-36.1-41.9-71-106.7-93.4m-14.9 166.4-10 3.1q-11.7-36.2-30.5-76a601 601 0 0 0 29.2-74.9q9.3 2.7 17.9 5.6c55.5 19.2 89.4 47.4 89.4 69.2 0 23.2-36.6 53.3-96 73m-24.6 48.8a217 217 0 0 1 2.8 79.2c-3.5 19.3-10.7 32.1-19.6 37.2-19 11-59.3-3.2-103-40.8q-7.5-6.5-15-13.7 25.4-27.9 50.3-63.9c29-2.6 56.4-6.8 81.2-12.5zM204.6 536c-18.5 6.5-33.2 6.7-42.1 1.5-19-10.9-26.8-53-16-109.5q1.7-9.8 4.3-20a603 603 0 0 0 80.8 11.7 624 624 0 0 0 51.6 63.7q-5.8 5.5-11.5 10.5a217 217 0 0 1-67.1 42M118 372.3a217 217 0 0 1-70-37.1c-14.9-12.8-22.4-25.4-22.4-35.7 0-21.9 32.6-49.7 87-68.7q9.8-3.4 20.6-6.5 11.3 37 29.2 75.8c-12 26.2-22 52.2-29.6 76.9q-7.5-2.2-14.8-4.7M147 175c-11.3-57.7-3.8-101.1 15-112 20.1-11.7 64.5 4.9 111.3 46.4l9 8.3a614 614 0 0 0-51 63.3 626 626 0 0 0-80.2 12.4q-2.3-9.3-4-18.4m258.8 63.9q-9-15.5-18.2-30 28.8 3.6 54.7 9.5A548 548 0 0 1 423 270a892 892 0 0 0-17.3-31.2M300.3 136a548 548 0 0 1 35.3 42.6 755 755 0 0 0-71 0 566 566 0 0 1 35.7-42.6M194 239a757 757 0 0 0-17 31 566 566 0 0 1-19-52q25.6-5.8 54.4-9.3Q203 223.5 194 239m19 153a545 545 0 0 1-55.4-8.9 576 576 0 0 1 19.5-53 754 754 0 0 0 35.8 62m87.9 72.7a576 576 0 0 1-36.1-43.2 895 895 0 0 0 71.3 0 545 545 0 0 1-35.2 43.2m122.3-135.5q12 27.5 20.2 52.8-26.2 6-56 9.5a896 896 0 0 0 35.8-62.3m-39.6 19q-14 24.4-28.8 46.5a772 772 0 0 1-109.2.2 727 727 0 0 1-55-94.9 720 720 0 0 1 54.6-94.7 726 726 0 0 1 109.4 0 772 772 0 0 1 54.8 94.3q-11.7 24.2-25.8 48.6m53-286.2c20 11.6 27.8 58.3 15.2 119.6l-2.7 12a614 614 0 0 0-80.2-12.8 602 602 0 0 0-50.8-63.3l14-12.6c44.3-38.6 85.7-53.8 104.6-43M300 245.9a53.6 53.6 0 1 1 0 107.2 53.6 53.6 0 0 1 0-107.2" />
+                        </svg>
+                    </a>
+                    <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Next.js" class="flex items-center justify-center size-10 sm:size-10 md:size-10 lg:size-10 rounded-md border border-[#12345A] dark:border-[#1D4F7A]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5 sm:size-6 md:size-6 lg:size-6" viewBox="0 0 600 600" aria-hidden="true">
+                            <g clip-path="url(#devicon-nextjs-icon-3-a)">
+                                <path class="fill-slate-900 dark:fill-white"
+                                    d="M300 600a300 300 0 1 0 0-600 300 300 0 0 0 0 600" />
+                                <path class="fill-white dark:fill-slate-900"
+                                    d="m498.4 525-268-345H180v239.9h40.4V231.3l246.3 318.2a301 301 0 0 0 31.7-24.4" />
+                                <path class="fill-white dark:fill-slate-900" d="M423.3 180h-40v240h40z" />
+                            </g>
+                            <defs>
+                                <clipPath id="devicon-nextjs-icon-3-a">
+                                    <path fill="#fff" d="M0 0h600v600H0z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer" aria-label="Angular" class="flex items-center justify-center size-10 sm:size-10 md:size-10 lg:size-10 rounded-md border border-[#12345A] dark:border-[#1D4F7A]">
+                        <svg class="size-5 sm:size-6 md:size-6 lg:size-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 600 600">
+                            <path fill="url(#devicon-angular-icon-2-a)"
+                                d="M583.4 100 563 421.4 367.3 0zM448 515.6 300 600l-147.9-84.4 30.1-72.9h235.6zM300 160l77.5 188.3h-155zM36.8 421.4 16.6 100 232.7 0z" />
+                            <path fill="url(#devicon-angular-icon-3-b)"
+                                d="M583.4 100 563 421.4 367.3 0zM448 515.6 300 600l-147.9-84.4 30.1-72.9h235.6zM300 160l77.5 188.3h-155zM36.8 421.4 16.6 100 232.7 0z" />
+                            <defs>
+                                <linearGradient id="devicon-angular-icon-2-a" x1="14227.8" x2="55401" y1="54557.5"
+                                    y2="34991.3" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E40035" />
+                                    <stop offset=".2" stop-color="#F60A48" />
+                                    <stop offset=".4" stop-color="#F20755" />
+                                    <stop offset=".5" stop-color="#DC087D" />
+                                    <stop offset=".7" stop-color="#9717E7" />
+                                    <stop offset="1" stop-color="#6C00F5" />
+                                </linearGradient>
+                                <linearGradient id="devicon-angular-icon-3-b" x1="12409.1" x2="40564.6" y1="7234.5"
+                                    y2="39352.1" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF31D9" />
+                                    <stop offset="1" stop-color="#FF5BE1" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center lg:justify-end gap-4 ">
+                <p class="text-[12px] sm:text-[13px] md:text-[14px] leading-5 text-slate-500 dark:text-slate-400 text-center md:text-right ">
+                    {{ languageService.translations.footer.copyright }}
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

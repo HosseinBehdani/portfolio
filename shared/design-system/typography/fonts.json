@@ -1,0 +1,29 @@
+{
+    "families": {
+        "persian": {
+            "name": "Vazirmatn",
+            "source": "../../assets/fonts/vazirmatn/Vazirmatn-Variable.woff2",
+            "weight": "100 900",
+            "style": "normal"
+        },
+        "english": {
+            "name": "Inter",
+            "source": "../../assets/fonts/inter/InterVariable.woff2",
+            "weight": "100 900",
+            "style": "normal"
+        }
+    },
+    "fallbacks": {
+        "persian": [
+            "Vazirmatn",
+            "Tahoma",
+            "Arial",
+            "sans-serif"
+        ],
+        "english": [
+            "Inter",
+            "Arial",
+            "sans-serif"
+        ]
+    }
+}

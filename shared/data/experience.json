@@ -1,0 +1,17 @@
+[
+    {
+        "id": "daneshjooyar",
+        "company": "Daneshjooyar",
+        "roleKey": "experience.daneshjooyar.role",
+        "descriptionKey": "experience.daneshjooyar.description",
+        "startDate": "2024-10",
+        "technologies": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Bootstrap",
+            "Tailwind CSS",
+            "jQuery"
+        ]
+    }
+]

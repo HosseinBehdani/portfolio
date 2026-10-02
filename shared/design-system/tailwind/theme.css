@@ -1,0 +1,78 @@
+@theme {
+    --color-primary: #7C3AED;
+    --color-primary-end: #A21CAF;
+    --color-secondary: #6366F1;
+    --color-accent: #D946EF;
+    --color-background: #FFFFFF;
+    --color-surface: #F7F7FB;
+    --color-border: #E5E5ED;
+    --color-text-primary: #111118;
+    --color-text-muted: #6B6B7B;
+    --color-success: #22C55E;
+    --color-info: #38BDF8;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+    --color-hover: #7C3AED1A;
+    --color-active: #7C3AED33;
+    --color-focus: #A855F740;
+
+    --font-persian: "Vazirmatn", Tahoma, Arial, sans-serif;
+    --font-english: "Inter", Arial, sans-serif;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --text-display: 4rem;
+    --text-h1: 3rem;
+    --text-h2: 2.25rem;
+    --text-h3: 1.5rem;
+    --text-h4: 1.25rem;
+    --text-body-lg: 1.125rem;
+    --text-body: 1rem;
+    --text-body-sm: 0.875rem;
+    --text-caption: 0.75rem;
+
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+    --spacing-xl: 1.25rem;
+    --spacing-2xl: 1.5rem;
+    --spacing-3xl: 2rem;
+    --spacing-4xl: 2.5rem;
+    --spacing-5xl: 3rem;
+    --spacing-6xl: 4rem;
+    --spacing-7xl: 5rem;
+    --spacing-8xl: 6rem;
+    --spacing-9xl: 8rem;
+
+    --radius-none: 0px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-3xl: 32px;
+    --radius-full: 9999px;
+
+    --shadow-none: none;
+    --shadow-sm: 0 1px 2px rgba(17, 17, 24, 0.05);
+    --shadow-md: 0 4px 12px rgba(17, 17, 24, 0.08);
+    --shadow-lg: 0 10px 30px rgba(17, 17, 24, 0.10);
+    --shadow-xl: 0 20px 60px rgba(17, 17, 24, 0.12);
+    --shadow-focus: 0 0 0 2px rgba(168, 85, 247, 0.25);
+
+    --transition-duration-instant: 0ms;
+    --transition-duration-fast: 150ms;
+    --transition-duration-normal: 200ms;
+    --transition-duration-moderate: 300ms;
+    --transition-duration-slow: 500ms;
+
+    --ease-linear: linear;
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}

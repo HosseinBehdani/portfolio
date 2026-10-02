@@ -1,0 +1,39 @@
+{
+    "items": [
+        {
+            "key": "home",
+            "href": "#home",
+            "order": 1
+        },
+        {
+            "key": "about",
+            "href": "#about",
+            "order": 2
+        },
+        {
+            "key": "skills",
+            "href": "#skills",
+            "order": 3
+        },
+        {
+            "key": "experience",
+            "href": "#experience",
+            "order": 4
+        },
+        {
+            "key": "projects",
+            "href": "#projects",
+            "order": 5
+        },
+        {
+            "key": "certificates",
+            "href": "#certificates",
+            "order": 6
+        },
+        {
+            "key": "contact",
+            "href": "#contact",
+            "order": 7
+        }
+    ]
+}

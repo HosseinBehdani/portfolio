@@ -1,0 +1,65 @@
+@keyframes spinSlow {
+    from {
+        transform: rotate(-20deg);
+    }
+    to {
+        transform: rotate(340deg);
+    }
+}
+
+@keyframes spinReverse {
+    from {
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(-345deg);
+    }
+}
+
+@keyframes orbitCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spinSlow 12s linear infinite;
+}
+
+.animate-spin-reverse {
+    animation: spinReverse 18s linear infinite;
+}
+
+.animate-orbit-circle {
+    animation: orbitCircle 8s linear infinite;
+}
+
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes float-delay {
+    0%,100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delay {
+    animation: float-delay 6s ease-in-out infinite;
+}

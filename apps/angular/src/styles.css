@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "../../../shared/design-system/tailwind/theme.css";
+@import "../../../shared/design-system/typography/classes.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+
+    .container-custom {
+        @apply w-[100%] mx-auto;
+    }
+
+}
+
+@font-face {
+    font-family: "Vazirmatn";
+    src: url("../../../shared/assets/fonts/vazirmatn/Vazirmatn-Variable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../../../shared/assets/fonts/inter/InterVariable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+:root {
+    color-scheme: light;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Vazirmatn", sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    scroll-behavior: smooth;
+}
+
+html.dark {
+    color-scheme: dark;
+    background-color: #050816;
+    color: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8FAFC;
+    color: #0F172A;
+}
+
+html.dark body {
+    background-color: #050816;
+    color: #FFFFFF;
+}
+
+app-root {
+    display: block;
+}

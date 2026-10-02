@@ -1,0 +1,32 @@
+{
+    "brand": {
+        "primary": "#7C3AED",
+        "primaryGradientEnd": "#A21CAF",
+        "secondary": "#6366F1",
+        "accent": "#D946EF"
+    },
+    "neutral": {
+        "darkBackground": "#0A0A12",
+        "darkSurface": "#13131E",
+        "darkSurfaceElevated": "#17172447",
+        "darkBorder": "#26263680",
+        "darkText": "#F5F5F7",
+        "darkTextMuted": "#9B9BAE",
+        "lightBackground": "#FFFFFF",
+        "lightSurface": "#F7F7FB",
+        "lightBorder": "#E5E5ED",
+        "lightText": "#111118",
+        "lightTextMuted": "#6B6B7B"
+    },
+    "status": {
+        "success": "#22C55E",
+        "info": "#38BDF8",
+        "warning": "#F59E0B",
+        "error": "#EF4444"
+    },
+    "interaction": {
+        "hover": "#7C3AED1A",
+        "active": "#7C3AED33",
+        "focus": "#A855F740"
+    }
+}

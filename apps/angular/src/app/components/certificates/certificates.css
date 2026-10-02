@@ -1,0 +1,43 @@
+.certificate-list {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.certificate-list::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .certificate-list {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(148, 163, 184, 0.8) transparent;
+    }
+
+    .certificate-list::-webkit-scrollbar {
+        display: block;
+        width: 5px;
+    }
+
+    .certificate-list::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .certificate-list::-webkit-scrollbar-thumb {
+        background: rgba(148, 163, 184, 0.8);
+        border-radius: 9999px;
+    }
+
+    .dark .certificate-list {
+        scrollbar-color: rgba(139, 92, 246, 0.65) transparent;
+    }
+
+    .dark .certificate-list::-webkit-scrollbar-thumb {
+        background: rgba(139, 92, 246, 0.65);
+    }
+
+    :host-context(html[dir="rtl"]) .certificate-list {
+        padding-left: 0.3rem;
+        padding-right: 0;
+    }
+}

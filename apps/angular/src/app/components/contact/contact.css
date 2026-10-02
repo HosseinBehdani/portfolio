@@ -1,0 +1,144 @@
+.contact-alert {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    padding: 0.7rem 0.9rem 0.7rem 0.75rem;
+    overflow: hidden;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+    animation: contact-alert-enter 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dark .contact-alert {
+    background: rgba(5, 8, 22, 0.92);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+}
+
+.contact-alert-success {
+    border-color: rgba(34, 197, 94, 0.4);
+    color: rgb(22, 163, 74);
+}
+
+.contact-alert-error {
+    border-color: rgba(239, 68, 68, 0.4);
+    color: rgb(220, 38, 38);
+}
+
+.contact-alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+}
+
+.contact-alert-icon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.contact-alert-success .contact-alert-icon {
+    background: rgba(34, 197, 94, 0.12);
+}
+
+.contact-alert-error .contact-alert-icon {
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.contact-alert-message {
+    padding-top: 1px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    color: rgb(51, 65, 85);
+}
+
+.dark .contact-alert-message {
+    color: rgb(226, 232, 240);
+}
+
+.contact-alert-timer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    transform-origin: left;
+    animation: contact-alert-timer 5000ms linear forwards;
+}
+
+.contact-alert-success .contact-alert-timer {
+    background: rgb(34, 197, 94);
+}
+
+.contact-alert-error .contact-alert-timer {
+    background: rgb(239, 68, 68);
+}
+
+.contact-alert-closing {
+    animation: contact-alert-exit 400ms cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes contact-alert-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contact-alert-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes contact-alert-timer {
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-alert {
+        top: 1rem;
+        right: 1rem;
+        max-width: calc(100vw - 2rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-alert,
+    .contact-alert-timer {
+        animation: none;
+    }
+
+    .contact-alert-timer {
+        transform: scaleX(0);
+    }
+}

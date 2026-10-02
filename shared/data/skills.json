@@ -1,0 +1,77 @@
+[
+    {
+        "id": "html",
+        "name": "HTML",
+        "level": 4
+    },
+    {
+        "id": "css",
+        "name": "CSS",
+        "level": 4
+    },
+    {
+        "id": "bootstrap",
+        "name": "Bootstrap",
+        "level": 4
+    },
+    {
+        "id": "tailwind",
+        "name": "Tailwind",
+        "level": 4
+    },
+    {
+        "id": "javascript",
+        "name": "JavaScript",
+        "level": 4
+    },
+    {
+        "id": "typescript",
+        "name": "TypeScript",
+        "level": 3
+    },
+    {
+        "id": "jquery",
+        "name": "jQuery",
+        "level": 4
+    },
+    {
+        "id": "angular",
+        "name": "Angular",
+        "level": 3
+    },
+    {
+        "id": "react",
+        "name": "React",
+        "level": 3
+    },
+    {
+        "id": "nextjs",
+        "name": "Next",
+        "level": 3
+    },
+    {
+        "id": "java",
+        "name": "Java",
+        "level": 3
+    },
+    {
+        "id": "rest-api",
+        "name": "REST API",
+        "level": 3
+    },
+    {
+        "id": "figma",
+        "name": "Figma",
+        "level": 4
+    },
+    {
+        "id": "git",
+        "name": "Git",
+        "level": 4
+    },
+    {
+        "id": "github",
+        "name": "GitHub",
+        "level": 4
+    }
+]

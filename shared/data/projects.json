@@ -1,0 +1,47 @@
+[
+    {
+        "id": "science-and-technology-park",
+        "titleKey": "projects.scienceAndTechnologyPark.title",
+        "descriptionKey": "projects.scienceAndTechnologyPark.description",
+        "image": "",
+        "technologies": [
+            "Bootstrap",
+            "JavaScript"
+        ],
+        "links": {
+            "github": "https://github.com/HosseinBhedani/Science-and-Technology-Park",
+            "demo": "https://www.skstp.ir/"
+        },
+        "featured": true
+    },
+    {
+        "id": "ali-akbar-rehabilitation",
+        "titleKey": "projects.aliAkbarRehabilitation.title",
+        "descriptionKey": "projects.aliAkbarRehabilitation.description",
+        "image": "",
+        "technologies": [
+            "Bootstrap",
+            "JavaScript"
+        ],
+        "links": {
+            "github": "https://github.com/HosseinBhedani/Ali-Akbar-Rehabilitation",
+            "demo": "https://www.tavanaliakbar.ir/"
+        },
+        "featured": true
+    },
+    {
+        "id": "ahmadi-spare-parts",
+        "titleKey": "projects.ahmadiSpareParts.title",
+        "descriptionKey": "projects.ahmadiSpareParts.description",
+        "image": "",
+        "technologies": [
+            "Bootstrap",
+            "JavaScript"
+        ],
+        "links": {
+            "github": "https://github.com/HosseinBhedani/Ahmadi-Spare-Parts",
+            "demo": "https://ahmadicm.com/"
+        },
+        "featured": true
+    }
+]

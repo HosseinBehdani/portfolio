@@ -1,0 +1,26 @@
+[
+    {
+        "id": "telegram",
+        "name": "Telegram",
+        "username": "@Hos3sein_B",
+        "url": "https://t.me/Hos3sein_B"
+    },
+    {
+        "id": "instagram",
+        "name": "Instagram",
+        "username": "hosein_behdani",
+        "url": "https://www.instagram.com/hosein_behdani/"
+    },
+    {
+        "id": "whatsapp",
+        "name": "WhatsApp",
+        "username": "Hossein",
+        "url": "https://wa.me/989038025430"
+    },
+    {
+        "id": "bale",
+        "name": "Bale",
+        "username": "Hossein Behdani",
+        "url": "https://ble.ir/Hos3sein_B"
+    }
+]

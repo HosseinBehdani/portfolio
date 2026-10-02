@@ -1,0 +1,187 @@
+{
+    "meta": {
+        "language": "en",
+        "direction": "ltr"
+    },
+    "common": {
+        "downloadResume": "Download Resume",
+        "viewProject": "View Project",
+        "viewCode": "View Code",
+        "liveDemo": "Live Demo",
+        "readMore": "Read More",
+        "contactMe": "Contact Me",
+        "sendMessage": "Send Message",
+        "seeAll": "See All",
+        "menu": "Menu",
+        "language": "Language",
+        "theme": "Theme",
+        "frameworks": "Frameworks"
+    },
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "experience": "Experience",
+        "projects": "Projects",
+        "certificates": "Certificates",
+        "contact": "Contact"
+    },
+    "theme": {
+        "light": "Light Mode",
+        "dark": "Dark Mode",
+        "switchToLight": "Switch to light mode",
+        "switchToDark": "Switch to dark mode"
+    },
+    "language": {
+        "persian": "فارسی",
+        "english": "English"
+    },
+    "framework": {
+        "angular": "Angular",
+        "react": "React",
+        "nextjs": "Next.js"
+    },
+    "hero": {
+        "greeting": "Hello, I'm",
+        "firstName": "Hossein",
+        "lastName": "Behdani",
+        "nameSuffix": "",
+        "role": "Front-End Developer",
+        "description": "I build fast, scalable and beautiful web applications using modern front-end technologies.",
+        "downloadResume": "Download Resume",
+        "buildWith": "Build with",
+        "angular": "Angular"
+    },
+    "profile": {
+        "name": "Hossein Behdani",
+        "role": "Front-End Developer",
+        "availability": "Available for work"
+    },
+    "about": {
+        "title": "About Me",
+        "paragraph1": "My interest in programming started with a curiosity to build and learn, which gradually led me into web development. Today, I focus on front-end development and enjoy creating modern, responsive, and user-friendly interfaces.",
+        "paragraph2": "I work with TypeScript, React, Next, and Angular. This website is where I share my projects, experiences, and learning journey while improving my skills through new challenges."
+    },
+    "status": {
+        "title": "My Status",
+        "projectsCompleted": "Projects Completed",
+        "yearsExperience": "Years Experience",
+        "responsiveDesign": "Responsive Design",
+        "gitRepositories": "Git Repositories"
+    },
+    "skills": {
+        "title": "Skills & Technologies"
+    },
+    "experience": {
+        "title": "Experience",
+        "employmentType": "Hybrid",
+        "company": "daneshjooyar",
+        "startDate": "Oct 2024 -",
+        "present": "Present",
+        "role": "Front-End Developer",
+        "responsibilities": [
+            "Contributed to the front-end development of websites for Birjand Science and Technology Park, Ali Akbar Rehabilitation Center, and Ahmadi Auto Parts.",
+            "Converted Figma UI designs into responsive web pages using HTML, CSS, Bootstrap, and JavaScript.",
+            "Implemented responsive and interactive user interfaces for desktop and mobile devices.",
+            "Collaborated with team members using Git and GitHub, while developing teamwork and professional networking skills.",
+            "Worked as a teaching assistant and instructor at Daneshjooyar, supporting learners and sharing practical front-end development knowledge."
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "liveSite": "Live Site",
+        "github": "GitHub",
+        "scienceAndTechnologyPark": {
+            "title": "South Khorasan Science & Technology Park"
+        },
+        "aliAkbarRehabilitation": {
+            "title": "Ali Akbar Rehabilitation"
+        },
+        "ahmadiSpareParts": {
+            "title": "Ahmadi Spare Parts"
+        }
+    },
+    "certificates": {
+        "title": "Certificates",
+        "credential": "Credential",
+        "items": [
+            {
+                "name": "Java",
+                "year": 2026,
+                "logo": "assets/images/dotinschool.webp",
+                "credentialUrl": "#"
+            },
+            {
+                "name": "Java Intermediate",
+                "year": 2026,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-0D8XQHU1"
+            },
+            {
+                "name": "Introduction to Java",
+                "year": 2026,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-WCXO3HDK"
+            },
+            {
+                "name": "Angular",
+                "year": 2026,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-4CCHY0K9"
+            },
+            {
+                "name": "TypeScript for Beginners",
+                "year": 2026,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-MH4M1LSH"
+            },
+            {
+                "name": "JavaScript Intermediate",
+                "year": 2025,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-JWLEERH8"
+            },
+            {
+                "name": "Introduction to JavaScript",
+                "year": 2025,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-FKQTWCTI"
+            },
+            {
+                "name": "Introduction to CSS",
+                "year": 2025,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-ZR9I87AF"
+            },
+            {
+                "name": "Introduction to HTML",
+                "year": 2025,
+                "logo": "assets/images/Solo Learn.webp",
+                "credentialUrl": "https://www.sololearn.com/certificates/CC-AOOIX7MS"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Let's Work Together",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "locationValue": "Tehran, Iran",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "namePlaceholder": "Your Name",
+        "emailPlaceholder": "Your Email",
+        "subjectPlaceholder": "Subject",
+        "messagePlaceholder": "Your Message",
+        "sendMessage": "Send Message",
+        "submitting": "Sending...",
+        "successMessage": "Message sent successfully.",
+        "errorMessage": "Something went wrong. Please try again."
+    },
+    "footer": {
+        "role": "Front-End Developer",
+        "description": "Building modern, beautiful, and user-focused web experiences.",
+        "techStack": "Tech Stack",
+        "copyright": "© 2026 Hossein Behdani. All rights reserved."
+    }
+}

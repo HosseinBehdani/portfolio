@@ -1,0 +1,24 @@
+<div class="p-3 rounded-md border-2 border-[#12345A] dark:border-[#1D4F7A] scroll-mt-25 lg:scroll-mt-22" id="certificates" data-aos="fade-up">
+    <div class="flex items-center gap-x-1">
+        <span class="size-4 lg:size-5 shrink-0 rounded-full bg-purple-500"></span>
+        <h2 class="pt-1 rtl:pt-0 text-xl sm:text-xl md:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">
+            {{ languageService.translations.certificates.title }}
+        </h2>
+    </div>
+    <div class="certificate-list mt-3 sm:mt-4 max-h-[220px] sm:max-h-[240px] lg:max-h-[300px] overflow-y-auto space-y-1.5 sm:space-y-2 lg:pr-1.5">
+        @for (certificate of languageService.translations.certificates.items; track certificate.credentialUrl) {
+            <div class="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 lg:gap-3 p-1.5 sm:p-2 md:p-2.5 lg:p-2.5 rounded-md border border-slate-200 bg-white dark:border-[#1A365D] dark:bg-[#0B1224]">
+                <img [src]="certificate.logo" width="1254" height="1254" [alt]="certificate.name" class="size-8 sm:size-10 md:size-11 lg:size-7 xl:size-10 shrink-0 object-contain">
+                <span class="flex-1 min-w-0 text-[15px] sm:text-base md:text-base lg:text-[14px] xl:text-[17px] font-semibold mt-1 sm:mt-1 md:mt-1.5 lg:mt-1.5 text-slate-700 dark:text-white">
+                    {{ certificate.name }}
+                </span>
+                <time [attr.datetime]="certificate.year" class="w-8 sm:w-11 md:w-12 lg:w-7 xl:w-12 shrink-0 text-sm sm:text-base md:text-base lg:text-[14px] xl:text-base mt-1 sm:mt-1 md:mt-1.5 lg:mt-1.5 font-medium text-slate-600 dark:text-slate-300">
+                    {{ toLocaleYear(certificate.year) }}
+                </time>
+                <a [href]="certificate.credentialUrl" target="_blank" rel="noopener noreferrer" class="shrink-0 text-sm sm:text-base md:text-base lg:text-[14px] xl:text-base mt-1 sm:mt-1 md:mt-1.5 lg:mt-1.5 font-medium text-purple-600 dark:text-purple-400">
+                    {{ languageService.translations.certificates.credential }}
+                </a>
+            </div>
+        }
+    </div>
+</div>
