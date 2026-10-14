@@ -4,6 +4,12 @@
     -ms-overflow-style: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .certificate-list {
+        scroll-behavior: auto;
+    }
+}
+
 .certificate-list::-webkit-scrollbar {
     display: none;
 }
@@ -37,7 +43,7 @@
     }
 
     :host-context(html[dir="rtl"]) .certificate-list {
-        padding-left: 0.3rem;
-        padding-right: 0;
+        padding-inline-start: 0.3rem;
+        padding-inline-end: 0;
     }
 }

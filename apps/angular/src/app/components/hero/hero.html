@@ -43,7 +43,7 @@
             </a>
             <ul class="mt-6 flex items-center gap-4">
                 <li *ngFor="let social of socials">
-                    <a [href]="social.url" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center size-11 rounded-xl border border-slate-200/80 bg-slate-100/80 text-slate-700 transition-all duration-300 hover:-translate-y-1 dark:border-white/10 dark:bg-white/[0.06] dark:text-slate-200">
+                    <a [href]="social.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="social.name" class="flex items-center justify-center size-11 rounded-xl border border-slate-200/80 bg-slate-100/80 text-slate-700 transition-all duration-300 hover:-translate-y-1 dark:border-white/10 dark:bg-white/[0.06] dark:text-slate-200">
                         <svg *ngIf="social.id === 'telegram'" xmlns="http://www.w3.org/2000/svg" class="size-7 text-[#229ED9]" fill="currentColor" viewBox="0 0 256 256">
                             <path
                                 d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z">
@@ -88,7 +88,7 @@
                 <div class=" absolute w-[320px] h-[115px] sm:w-[400px] sm:h-[135px] md:w-[460px] md:h-[155px] lg:w-[400px] lg:h-[130px] xl:w-[450px] xl:h-[150px] rounded-[50%] border-2 border-cyan-400/70 rotate-[15deg] animate-spin-reverse shadow-[0_0_35px_#22d3ee,0_0_90px_#06b6d4]"></div>
                 <div class=" absolute w-[250px] h-[250px] sm:w-[310px] sm:h-[310px] md:w-[360px] md:h-[360px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] rounded-full border-4 border-fuchsia-500/80 animate-orbit-circle shadow-[0_0_25px_#d946ef,0_0_70px_#8b5cf6] z-[5]"></div>
                 <div class=" absolute w-[175px] h-[175px] sm:w-[210px] sm:h-[210px] md:w-[240px] md:h-[240px] lg:w-[250px] lg:h-[250px]  rounded-full bg-cyan-400/20 blur-3xl"></div>
-                <img src="/assets/images/My photo hero.webp" width="1254" height="1254" class="relative z-10 max-w-none w-99 h-100 sm:w-140 sm:h-110 md:w-160 md:h-120 lg:w-130 lg:h-130 xl:w-180 xl:h-140 " alt="My photo hero">
+                <img src="/assets/images/My photo hero.webp" width="1254" height="1254" fetchpriority="high" decoding="async" class="relative z-10 max-w-none w-99 h-100 sm:w-140 sm:h-110 md:w-160 md:h-120 lg:w-130 lg:h-130 xl:w-180 xl:h-140 " [attr.alt]="currentTranslations.profile.name">
             </div>
             <div class="absolute inset-0" [ngClass]="directionClass">
                 <div class="absolute left-[8%] top-[12%] sm:left-[17%] sm:top-[14%] md:left-[16%] md:top-[16%]   lg:left-[13%]  xl:left-33 xl:top-25 animate-float opacity-80 hover:scale-110 transition-transform duration-300">

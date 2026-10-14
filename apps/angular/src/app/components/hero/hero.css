@@ -63,3 +63,13 @@
 .animate-float-delay {
     animation: float-delay 6s ease-in-out infinite;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-spin-slow,
+    .animate-spin-reverse,
+    .animate-orbit-circle,
+    .animate-float,
+    .animate-float-delay {
+        animation: none;
+    }
+}

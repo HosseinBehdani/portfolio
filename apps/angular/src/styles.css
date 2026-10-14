@@ -1,6 +1,7 @@
 @import "tailwindcss";
-@import "../../../shared/design-system/tailwind/theme.css";
-@import "../../../shared/design-system/typography/classes.css";
+@import "@portfolio/design-system/theme";
+@import "@portfolio/design-system/typography";
+@import "@portfolio/design-system/fonts";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -10,20 +11,6 @@
         @apply w-[100%] mx-auto;
     }
 
-}
-
-@font-face {
-    font-family: "Vazirmatn";
-    src: url("../../../shared/assets/fonts/vazirmatn/Vazirmatn-Variable.woff2") format("woff2");
-    font-weight: 100 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Inter";
-    src: url("../../../shared/assets/fonts/inter/InterVariable.woff2") format("woff2");
-    font-weight: 100 900;
-    font-style: normal;
 }
 
 :root {
@@ -37,6 +24,16 @@ html {
     background-color: #F8FAFC;
     color: #0F172A;
     scroll-behavior: smooth;
+}
+
+html[lang="en"] {
+    font-family: "Inter", sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 html.dark {
@@ -55,6 +52,31 @@ body {
 html.dark body {
     background-color: #050816;
     color: #FFFFFF;
+}
+
+:focus-visible {
+    outline: 2px solid rgb(147, 51, 234);
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    inset-inline-start: 1rem;
+    top: 1rem;
+    z-index: 200;
+    transform: translateY(-160%);
+    border-radius: 0.5rem;
+    background: #7c3aed;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    transform: translateY(0);
 }
 
 app-root {

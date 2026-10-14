@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { socials } from '@shared/data';
+import { socials } from '@portfolio/data';
 import { LanguageService } from '../../services/language.service';
 
 

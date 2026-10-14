@@ -1,0 +1,22 @@
+[
+    {
+        "id": "projectsCompleted",
+        "value": 3,
+        "format": "integer"
+    },
+    {
+        "id": "yearsExperience",
+        "value": 3,
+        "format": "integer"
+    },
+    {
+        "id": "responsiveDesign",
+        "value": 100,
+        "format": "percent"
+    },
+    {
+        "id": "gitRepositories",
+        "value": 3,
+        "format": "integer"
+    }
+]

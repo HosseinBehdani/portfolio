@@ -4,21 +4,21 @@
     "private": true,
     "type": "module",
     "exports": {
+        ".": "./src/index.ts",
         "./profile": "./profile.json",
         "./skills": "./skills.json",
         "./experience": "./experience.json",
         "./projects": "./projects.json",
         "./certificates": "./certificates.json",
         "./socials": "./socials.json",
-        "./navigation": "./navigation.json"
+        "./navigation": "./navigation.json",
+        "./status": "./status.json"
     },
     "scripts": {
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
-        "@portfolio/data": "workspace:*",
-        "@portfolio/types": "workspace:*",
-        "@portfolio/translations": "workspace:*"
+        "@portfolio/types": "workspace:*"
     },
     "devDependencies": {
         "typescript": "6.0.3"

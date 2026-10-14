@@ -1,0 +1,44 @@
+/* Shared strictness baseline for every project in the monorepo.
+ *
+ * Gradual strict-mode activation, ordered from most to least impactful.
+ * Each tier only depends on the tiers above it, so they can be enabled
+ * one group at a time. Flip a tier to "false" here to temporarily relax
+ * it repo-wide while a package catches up — nothing else needs editing.
+ *
+ *   Tier 1 — core strictness (already active everywhere)
+ *     strict, noImplicitOverride, noImplicitReturns,
+ *     noFallthroughCasesInSwitch, noPropertyAccessFromIndexSignature
+ *
+ *   Tier 2 — structural null/option safety
+ *     noUncheckedIndexedAccess, exactOptionalPropertyTypes
+ *
+ *   Tier 3 — dead-code hygiene
+ *     noUnusedLocals, noUnusedParameters,
+ *     allowUnreachableCode:false, allowUnusedLabels:false
+ *
+ * Module/moduleResolution/target-per-app overrides stay in each project's
+ * own tsconfig; this file only owns strictness plus the shared ES2022 target.
+ */
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "skipLibCheck": true,
+
+        /* Tier 1 */
+        "strict": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noPropertyAccessFromIndexSignature": true,
+
+        /* Tier 2 */
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+
+        /* Tier 3 */
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false
+    }
+}

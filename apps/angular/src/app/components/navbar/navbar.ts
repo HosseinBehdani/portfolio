@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import navigation from '@portfolio/data/navigation';
+import { navigation } from '@portfolio/data';
 import type { TranslationKey } from '@portfolio/types';
 import { ThemeService } from '../../services/theme.service';
 import { LanguageService, Language } from '../../services/language.service';

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-one-teal-25.vercel.app/sitemap.xml

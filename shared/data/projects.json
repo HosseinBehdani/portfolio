@@ -3,7 +3,6 @@
         "id": "science-and-technology-park",
         "titleKey": "projects.scienceAndTechnologyPark.title",
         "descriptionKey": "projects.scienceAndTechnologyPark.description",
-        "image": "",
         "technologies": [
             "Bootstrap",
             "JavaScript"
@@ -18,7 +17,6 @@
         "id": "ali-akbar-rehabilitation",
         "titleKey": "projects.aliAkbarRehabilitation.title",
         "descriptionKey": "projects.aliAkbarRehabilitation.description",
-        "image": "",
         "technologies": [
             "Bootstrap",
             "JavaScript"
@@ -33,7 +31,6 @@
         "id": "ahmadi-spare-parts",
         "titleKey": "projects.ahmadiSpareParts.title",
         "descriptionKey": "projects.ahmadiSpareParts.description",
-        "image": "",
         "technologies": [
             "Bootstrap",
             "JavaScript"

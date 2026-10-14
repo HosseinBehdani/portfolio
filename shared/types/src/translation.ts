@@ -12,6 +12,13 @@ export interface Translation {
     meta: {
         language: string;
         direction: string;
+        title: string;
+        description: string;
+        ogTitle: string;
+        ogDescription: string;
+        siteName: string;
+        skipToContent: string;
+        scrollToTop: string;
     };
 
     common: {
@@ -24,9 +31,12 @@ export interface Translation {
         sendMessage: string;
         seeAll: string;
         menu: string;
+        openMenu: string;
+        closeMenu: string;
         language: string;
         theme: string;
         frameworks: string;
+        logoAlt: string;
     };
 
     navigation: {
@@ -37,6 +47,13 @@ export interface Translation {
         projects: string;
         certificates: string;
         contact: string;
+    };
+
+    theme: {
+        light: string;
+        dark: string;
+        switchToLight: string;
+        switchToDark: string;
     };
 
     profile: {
@@ -124,10 +141,16 @@ export interface Translation {
         locationValue: string;
         linkedin: string;
         github: string;
+        nameLabel: string;
+        emailLabel: string;
+        subjectLabel: string;
+        messageLabel: string;
         namePlaceholder: string;
         emailPlaceholder: string;
         subjectPlaceholder: string;
         messagePlaceholder: string;
+        requiredError: string;
+        emailError: string;
         sendMessage: string;
         submitting: string;
         successMessage: string;

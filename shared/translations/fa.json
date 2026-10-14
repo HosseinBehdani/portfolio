@@ -1,7 +1,14 @@
 {
     "meta": {
         "language": "fa",
-        "direction": "rtl"
+        "direction": "rtl",
+        "title": "حسین بهدانی | توسعه‌دهنده فرانت‌اند",
+        "description": "حسین بهدانی توسعه‌دهنده فرانت‌اند است و روی ساخت رابط‌های وب مدرن، دسترس‌پذیر و نگهداری‌پذیر با Angular، React و Next.js تمرکز دارد.",
+        "ogTitle": "حسین بهدانی | توسعه‌دهنده فرانت‌اند",
+        "ogDescription": "نمونه کار فرانت‌اند با پروژه‌ها، مهارت‌ها و تجربه در Angular، React و Next.js.",
+        "siteName": "نمونه کار حسین بهدانی",
+        "skipToContent": "پرشی به محتوا",
+        "scrollToTop": "بازگشت به بالا"
     },
     "common": {
         "downloadResume": "دانلود رزومه",
@@ -13,9 +20,12 @@
         "sendMessage": "ارسال پیام",
         "seeAll": "مشاهده همه",
         "menu": "منو",
+        "openMenu": "باز کردن منو",
+        "closeMenu": "بستن منو",
         "language": "زبان",
         "theme": "تم",
-        "frameworks": "فریمورک‌ها"
+        "frameworks": "فریمورک‌ها",
+        "logoAlt": "لوگوی نمونه کار حسین بهدانی"
     },
     "navigation": {
         "home": "خانه",
@@ -169,10 +179,16 @@
         "locationValue": "تهران، ایران",
         "linkedin": "لینکدین",
         "github": "گیت‌هاب",
+        "nameLabel": "نام",
+        "emailLabel": "ایمیل",
+        "subjectLabel": "موضوع",
+        "messageLabel": "پیام",
         "namePlaceholder": "نام شما",
         "emailPlaceholder": "ایمیل شما",
         "subjectPlaceholder": "موضوع",
         "messagePlaceholder": "پیام شما",
+        "requiredError": "این فیلد الزامی است.",
+        "emailError": "یک نشانی ایمیل معتبر وارد کنید.",
         "sendMessage": "ارسال پیام",
         "submitting": "در حال ارسال...",
         "successMessage": "پیام با موفقیت ارسال شد.",

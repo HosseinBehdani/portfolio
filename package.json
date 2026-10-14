@@ -5,6 +5,10 @@
     "packageManager": "pnpm@10.34.5",
     "scripts": {
         "sync:assets": "node scripts/sync-assets.mjs",
-        "ng": "pnpm --filter angular start"
+        "ng": "pnpm --filter angular start",
+        "build": "pnpm --filter angular build",
+        "build:angular": "pnpm --filter angular build",
+        "typecheck": "pnpm --filter @portfolio/types typecheck && pnpm --filter @portfolio/data typecheck && pnpm --filter angular typecheck",
+        "lighthouse": "pnpm --filter angular lighthouse"
     }
 }

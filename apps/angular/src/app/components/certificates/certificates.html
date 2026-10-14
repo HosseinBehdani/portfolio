@@ -5,10 +5,10 @@
             {{ languageService.translations.certificates.title }}
         </h2>
     </div>
-    <div class="certificate-list mt-3 sm:mt-4 max-h-[220px] sm:max-h-[240px] lg:max-h-[300px] overflow-y-auto space-y-1.5 sm:space-y-2 lg:pr-1.5">
+    <div class="certificate-list mt-3 sm:mt-4 max-h-[220px] sm:max-h-[240px] lg:max-h-[365px] overflow-y-auto space-y-1.5 sm:space-y-2 lg:pe-1.5">
         @for (certificate of languageService.translations.certificates.items; track certificate.credentialUrl) {
             <div class="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 lg:gap-3 p-1.5 sm:p-2 md:p-2.5 lg:p-2.5 rounded-md border border-slate-200 bg-white dark:border-[#1A365D] dark:bg-[#0B1224]">
-                <img [src]="certificate.logo" width="1254" height="1254" [alt]="certificate.name" class="size-8 sm:size-10 md:size-11 lg:size-7 xl:size-10 shrink-0 object-contain">
+                <img [src]="certificate.logo" width="1254" height="1254" loading="lazy" decoding="async" [alt]="certificate.name" class="size-8 sm:size-10 md:size-11 lg:size-7 xl:size-10 shrink-0 object-contain">
                 <span class="flex-1 min-w-0 text-[15px] sm:text-base md:text-base lg:text-[14px] xl:text-[17px] font-semibold mt-1 sm:mt-1 md:mt-1.5 lg:mt-1.5 text-slate-700 dark:text-white">
                     {{ certificate.name }}
                 </span>

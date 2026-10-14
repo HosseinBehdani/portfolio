@@ -1,9 +1,9 @@
-import { AfterViewInit, Component, inject } from '@angular/core';
-import AOS from 'aos';
-import { RouterOutlet } from '@angular/router';
-import profile from '@portfolio/data/profile';
+import { Component, inject } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar';
 import { HeroComponent } from './components/hero/hero';
+import { AosService } from './services/aos.service';
+import { LanguageService } from './services/language.service';
+import { SeoService } from './services/seo.service';
 import { ThemeService } from './services/theme.service';
 import { AboutComponent } from './components/about/about';
 import { StatusComponent } from './components/status/status';
@@ -19,7 +19,6 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top';
     selector: 'app-root',
     standalone: true,
     imports: [
-        RouterOutlet,
         NavbarComponent,
         HeroComponent,
         AboutComponent,
@@ -35,19 +34,12 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top';
     templateUrl: './app.html',
     styleUrl: './app.css'
 })
-export class App implements AfterViewInit {
-    readonly themeService = inject(ThemeService);
-    profile = profile;
-
-    title() {
-        return 'Portfolio';
-    }
+export class App {
+    readonly languageService = inject(LanguageService);
 
     constructor() {
-        console.log(this.profile);
-    }
-
-    ngAfterViewInit(): void {
-        AOS.init();
+        inject(ThemeService);
+        inject(SeoService);
+        inject(AosService);
     }
 }

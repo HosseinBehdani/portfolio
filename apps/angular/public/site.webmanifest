@@ -1,0 +1,19 @@
+{
+  "name": "Hossein Behdani Portfolio",
+  "short_name": "Behdani",
+  "description": "Front-End Developer portfolio — Angular, React, and Next.js.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "lang": "fa",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/assets/images/Logo.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}

@@ -6,7 +6,10 @@
         "start": "pnpm -w sync:assets && ng serve",
         "build": "pnpm -w sync:assets && ng build",
         "watch": "pnpm -w sync:assets && ng build --watch --configuration development",
-        "test": "ng test"
+        "test": "ng test",
+        "typecheck": "tsc --noEmit -p tsconfig.app.json",
+        "serve:prod": "npx --yes serve dist/angular/browser -l 4173",
+        "lighthouse": "npx --yes lighthouse http://127.0.0.1:4173 --only-categories=performance,accessibility,best-practices,seo --preset=desktop --chrome-flags=\"--headless --no-sandbox\" --output=html,json --output-path=./lighthouse-report --quiet"
     },
     "private": true,
     "packageManager": "pnpm@10.34.5",
@@ -18,9 +21,9 @@
         "@angular/platform-browser": "^22.1.0",
         "@angular/router": "^22.1.0",
         "@portfolio/data": "workspace:*",
+        "@portfolio/design-system": "workspace:*",
         "@portfolio/translations": "workspace:*",
         "@portfolio/types": "workspace:*",
-        "@tailwindcss/vite": "^4.3.3",
         "aos": "^2.3.4",
         "countup.js": "^2.10.1",
         "rxjs": "~7.8.0",

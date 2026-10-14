@@ -6,5 +6,6 @@ export type { Experience } from './experience';
 export type { Project } from './project';
 export type { Certificate } from './certificate';
 export type { Social } from './social';
+export type { StatusStat, StatusStatFormat, StatusStatId, StatusStats } from './status';
 export * from './navigation';
 export * from './translation';

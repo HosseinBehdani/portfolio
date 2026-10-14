@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
-import { skills } from '@shared/data';
+import { skills } from '@portfolio/data';
 
 
 @Component({

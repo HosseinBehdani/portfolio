@@ -2,5 +2,10 @@
     "name": "@portfolio/design-system",
     "version": "1.0.0",
     "private": true,
-    "type": "module"
+    "type": "module",
+    "exports": {
+        "./theme": "./tailwind/theme.css",
+        "./typography": "./typography/classes.css",
+        "./fonts": "./fonts.css"
+    }
 }
