@@ -77,7 +77,7 @@ export class SeoService {
             email: 'mailto:behdanihosain@gmail.com',
             address: {
                 '@type': 'PostalAddress',
-                addressLocality: 'Tehran',
+                addressLocality: 'Birjand',
                 addressCountry: 'IR'
             },
             sameAs: [
