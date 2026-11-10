@@ -1,0 +1,11 @@
+# Hossein Behdani Portfolio
+
+This is the personal portfolio of Hossein Behdani, a front-end developer working with Angular, React, Next.js, and TypeScript. The site is available in Persian and English.
+
+## Pages and resources
+
+- [Portfolio homepage](https://portfolio-one-teal-25.vercel.app/): Profile, skills, experience, projects, certificates, and contact information.
+- [Sitemap](https://portfolio-one-teal-25.vercel.app/sitemap.xml): Public pages on this site.
+- [Resume in English](https://portfolio-one-teal-25.vercel.app/resume/Hossein-Behdani-Resume-en.pdf)
+- [رزومه فارسی](https://portfolio-one-teal-25.vercel.app/resume/Hossein-Behdani-Resume-fa.pdf)
+- [GitHub profile](https://github.com/HosseinBehdani)

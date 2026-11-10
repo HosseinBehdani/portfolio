@@ -6,12 +6,12 @@ import sharp from 'sharp';
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const imagesDir = path.join(root, 'shared', 'assets', 'images');
 
-/** Max CSS display * ~1.25–1.5 so Lighthouse 1x desktop stays close without looking soft. */
+/** Keep image dimensions close to their largest measured display size. */
 const maxWidths = {
-    'Logo.webp': 280,
+    'Logo.webp': 240,
     'daneshjooyar-logo.webp': 96,
-    'Portfolio.webp': 400,
-    'Tech Stack.webp': 480,
+    'Portfolio.webp': 336,
+    'Tech Stack.webp': 384,
     'My photo hero.webp': 800,
     'My photo offcanvas.webp': 256,
     'Science and technology park.webp': 800,
@@ -24,6 +24,11 @@ const maxWidths = {
 const files = fs.readdirSync(imagesDir).filter(
     (name) => name.endsWith('.webp') && !name.includes('.tmp.webp')
 );
+const highQualityImages = new Set([
+    'Science and technology park.webp',
+    'Ali Akbar Rehabilitation.webp',
+    'Spare parts.webp'
+]);
 
 for (const file of files) {
     const input = path.join(imagesDir, file);
@@ -34,13 +39,18 @@ for (const file of files) {
     const maxWidth = maxWidths[file] ?? 800;
     const width = Math.min(meta.width ?? maxWidth, maxWidth);
 
+    pipeline.resize({
+        width,
+        withoutEnlargement: true
+    });
+
+    if (file === 'My photo hero.webp') {
+        pipeline.sharpen(0.6);
+    }
+
     const output = await pipeline
-        .resize({
-            width,
-            withoutEnlargement: true
-        })
         .webp({
-            quality: 72,
+            quality: highQualityImages.has(file) ? 90 : file === 'My photo hero.webp' ? 88 : 72,
             effort: 6,
             smartSubsample: true
         })

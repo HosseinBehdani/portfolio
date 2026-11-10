@@ -1,5 +1,14 @@
 const PERSIAN_DIGITS = '۰۱۲۳۴۵۶۷۸۹';
 
+export function toEnglishDigits(input: string): string {
+    return input.replace(/[۰-۹٠-٩]/g, digit => {
+        const code = digit.charCodeAt(0);
+        const value = code >= 0x06f0 ? code - 0x06f0 : code - 0x0660;
+
+        return String(value);
+    });
+}
+
 /**
  * Replaces each ASCII digit (0-9) in `input` with its Persian numeral.
  *

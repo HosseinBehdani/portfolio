@@ -58,8 +58,13 @@ export class StatusComponent implements AfterViewInit {
         afterRenderEffect({
             read: () => this.languageService.language(),
             write: () => {
-                if (this.destroyed || this.phase === 'animating') {
+                if (this.destroyed) {
                     return;
+                }
+
+                if (this.phase === 'animating') {
+                    this.destroyCountUps();
+                    this.phase = 'done';
                 }
 
                 this.writeValues(this.phase === 'done' ? 'end' : 'start');

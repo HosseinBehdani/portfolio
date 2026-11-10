@@ -23,7 +23,7 @@
         <!-- HEADER -->
         <div class="flex items-center justify-between">
             <a href="#home" (click)="close()">
-                <img class="w-25 h-15" src="/assets/images/Logo.webp" width="280" height="140" [attr.alt]="currentTranslations.common.logoAlt">
+                <img class="w-25 h-auto" src="/assets/images/Logo.webp" width="240" height="120" [attr.alt]="currentTranslations.common.logoAlt">
             </a>
             <button
                 #closeButton
@@ -161,7 +161,7 @@
                 <span class="me-3">
                     FA
                 </span>
-                <span>
+                <span class="font-persian">
                     {{ currentTranslations.language.persian }}
                 </span>
             </button>

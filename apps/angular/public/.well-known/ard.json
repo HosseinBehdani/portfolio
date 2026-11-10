@@ -1,0 +1,14 @@
+{
+  "@context": "https://agenticresourcediscovery.org/context/v1",
+  "@id": "urn:air:portfolio-one-teal-25.vercel.app:hossein-behdani-portfolio",
+  "identifier": "urn:air:portfolio-one-teal-25.vercel.app:hossein-behdani-portfolio",
+  "displayName": "Hossein Behdani Portfolio",
+  "type": "text/html",
+  "url": "https://portfolio-one-teal-25.vercel.app/",
+  "description": "Personal portfolio of Hossein Behdani, a front-end developer specializing in Angular, React, Next.js, and TypeScript.",
+  "representativeQueries": [
+    "What front-end projects has Hossein Behdani built?",
+    "What technologies and frameworks does Hossein Behdani use?",
+    "How can I contact Hossein Behdani?"
+  ]
+}

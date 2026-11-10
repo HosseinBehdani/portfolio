@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
-import { toPersianDigits } from '../../utils/persian-digits';
 
 @Component({
     selector: 'app-certificates',
@@ -16,9 +15,9 @@ export class CertificatesComponent {
         if (this.languageService.language() === 'fa') {
             const persianYear = year - 621;
 
-            return toPersianDigits(persianYear.toString());
+            return this.languageService.toLocaleNumber(persianYear);
         }
 
-        return year.toString();
+        return this.languageService.toLocaleNumber(year);
     }
 }

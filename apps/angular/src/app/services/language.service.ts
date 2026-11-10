@@ -4,7 +4,7 @@ import fa from '@portfolio/translations/fa';
 import en from '@portfolio/translations/en';
 
 import type { Translation } from '@portfolio/types';
-import { toPersianDigits } from '../utils/persian-digits';
+import { toEnglishDigits, toPersianDigits } from '../utils/persian-digits';
 
 export type Language = 'fa' | 'en';
 
@@ -73,7 +73,7 @@ export class LanguageService {
     }
 
     toLocaleNumber(value: number | string): string {
-        const formatted = value.toString();
+        const formatted = toEnglishDigits(value.toString()).replace('٪', '%');
 
         return this.currentLanguage() === 'fa'
             ? toPersianDigits(formatted).replace('%', '٪')

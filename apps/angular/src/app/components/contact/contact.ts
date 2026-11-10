@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { LanguageService } from '../../services/language.service';
-import { toPersianDigits } from '../../utils/persian-digits';
 
 type ContactField = 'name' | 'email' | 'subject' | 'message';
 
@@ -33,9 +32,7 @@ export class ContactComponent {
     }
 
     toLocalePhone(phone: string): string {
-        return this.languageService.language() === 'fa'
-            ? toPersianDigits(phone)
-            : phone;
+        return this.languageService.toLocaleNumber(phone);
     }
 
     readonly contactForm = this.formBuilder.nonNullable.group({
