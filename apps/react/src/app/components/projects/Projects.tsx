@@ -1,0 +1,85 @@
+import './projects.css';
+import useLanguage from '../../providers/language/useLanguage';
+
+function Projects() {
+    const { translations } = useLanguage();
+
+    const projects = [
+        {
+            image: 'assets/images/Science and technology park.webp',
+            alt: 'South Khorasan Science & Technology Park',
+            title: translations.projects.scienceAndTechnologyPark.title,
+            liveUrl: 'https://www.skstp.ir/',
+            githubUrl: 'https://github.com/HosseinBehdani/Science-and-Technology-Park',
+        },
+        {
+            image: 'assets/images/Ali Akbar Rehabilitation.webp',
+            alt: 'Ali Akbar Rehabilitation',
+            title: translations.projects.aliAkbarRehabilitation.title,
+            liveUrl: 'https://tavanaliakbar.ir/',
+            githubUrl: 'https://github.com/HosseinBehdani/Ali-Akbar-Rehabilitation',
+        },
+        {
+            image: 'assets/images/Spare parts.webp',
+            alt: 'Ahmadi Spare Parts',
+            title: translations.projects.ahmadiSpareParts.title,
+            liveUrl: 'https://ahmadicm.com/',
+            githubUrl: 'https://github.com/HosseinBehdani/Ahmadi-Spare-Parts',
+        },
+    ];
+
+    return (
+        <section className="py-5 lg:py-3 scroll-mt-25 lg:scroll-mt-22" id="projects" aria-labelledby="projects-title" data-aos="fade-up">
+            <div className="px-3 lg:px-6">
+                <div className="p-2 sm:p-2.5 md:p-3 lg:p-3 rounded-md border-2 border-[#12345A] dark:border-[#1D4F7A]">
+                    <div className="flex items-center justify-between gap-1 sm:gap-2 md:gap-2.5 lg:gap-3">
+                        <div className="flex items-center gap-x-1">
+                            <span className="size-4 lg:size-5 shrink-0 rounded-full bg-purple-500"></span>
+                            <h2 id="projects-title" className="pt-1 rtl:pt-0 text-xl sm:text-xl md:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white">
+                                {translations.projects.title}
+                            </h2>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-3.5 lg:gap-4 py-3 sm:py-3.5 md:py-4 lg:py-4">
+                        {projects.map((project) => (
+                            <article key={project.title} className="h-full flex flex-col overflow-hidden rounded-md border-2 border-[#12345A] dark:border-[#1D4F7A] bg-transparent">
+                                <div className="w-full aspect-[19/9] overflow-hidden">
+                                    <img src={project.image} alt={project.alt} className="w-full h-full object-cover" width="800" height="366" />
+                                </div>
+                                <div className="flex-1 grid grid-rows-[minmax(0,1fr)_auto_auto] p-2 sm:p-2.5 md:p-2.5 lg:p-3">
+                                    <h3 className="text-[15px] sm:text-[17px] md:text-base lg:text-[17px] xl:text-lg font-bold text-slate-900 dark:text-white">
+                                        {project.title}
+                                    </h3>
+                                    <div className="flex flex-wrap gap-x-2 sm:gap-x-2.5 md:gap-x-3 lg:gap-x-3 gap-y-1 mt-2 sm:mt-2.5 md:mt-3 lg:mt-3">
+                                        <span className="text-[12px] sm:text-[13px] md:text-[12px] lg:text-[13px] xl:text-[14px] font-semibold px-1.5 sm:px-2 md:px-2 lg:px-2 py-0.5 sm:py-1 md:py-1 lg:py-1 rounded-md bg-cyan-500/10 text-cyan-400">HTML</span>
+                                        <span className="text-[12px] sm:text-[13px] md:text-[12px] lg:text-[13px] xl:text-[14px] font-semibold px-1.5 sm:px-2 md:px-2 lg:px-2 py-0.5 sm:py-1 md:py-1 lg:py-1 rounded-md bg-blue-500/10 text-blue-400">CSS</span>
+                                        <span className="text-[12px] sm:text-[13px] md:text-[12px] lg:text-[13px] xl:text-[14px] font-semibold px-1.5 sm:px-2 md:px-2 lg:px-2 py-0.5 sm:py-1 md:py-1 lg:py-1 rounded-md bg-purple-500/10 text-purple-400">Bootstrap</span>
+                                        <span className="text-[12px] sm:text-[13px] md:text-[12px] lg:text-[13px] xl:text-[14px] font-semibold px-1.5 sm:px-2 md:px-2 lg:px-2 py-0.5 sm:py-1 md:py-1 lg:py-1 rounded-md bg-yellow-500/10 text-yellow-400">JavaScript</span>
+                                    </div>
+                                    <div className="flex items-center justify-between mt-3 sm:mt-3.5 md:mt-4 lg:mt-4">
+                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 sm:gap-1.5 md:gap-1.5 lg:gap-1.5 text-[14px] sm:text-[16px] md:text-sm lg:text-base font-semibold text-slate-700 dark:text-slate-200 transition-colors">
+                                            {translations.projects.liveSite}
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="size-3.5 sm:size-4 md:size-4.5 lg:size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M14 3h7v7" />
+                                                <path d="M10 14 21 3" />
+                                                <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" />
+                                            </svg>
+                                        </a>
+                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 sm:gap-1.5 md:gap-1.5 lg:gap-1.5 text-[14px] sm:text-[16px] md:text-sm lg:text-base font-semibold text-slate-700 dark:text-slate-200 transition-colors">
+                                            {translations.projects.github}
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="size-3.5 sm:size-4 md:size-4.5 lg:size-5" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.02c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.52-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.35.78 1.04.78 2.1v3.12c0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+export default Projects;

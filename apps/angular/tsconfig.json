@@ -1,5 +1,3 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
     "compileOnSave": false,
     "extends": "../../tsconfig.base.json",
@@ -7,7 +5,9 @@
         "isolatedModules": true,
         "experimentalDecorators": true,
         "importHelpers": true,
-        "module": "preserve"
+        "module": "preserve",
+        "allowImportingTsExtensions": true,
+        "rewriteRelativeImportExtensions": true
     },
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,

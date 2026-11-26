@@ -6,9 +6,14 @@
     "scripts": {
         "optimize:images": "node scripts/optimize-images.mjs",
         "sync:assets": "node scripts/sync-assets.mjs",
+        "prepare:deploy": "node scripts/prepare-deploy.mjs",
         "ng": "pnpm --filter angular start",
+        "react": "pnpm --filter @portfolio/react-app dev",
+        "preview:local": "node scripts/preview.mjs",
         "build": "pnpm --filter angular build",
         "build:angular": "pnpm --filter angular build",
+        "build:react": "pnpm --filter @portfolio/react-app build",
+        "build:production": "pnpm build:angular && pnpm build:react && pnpm prepare:deploy",
         "typecheck": "pnpm --filter @portfolio/types typecheck && pnpm --filter @portfolio/data typecheck && pnpm --filter angular typecheck",
         "lighthouse": "pnpm --filter angular lighthouse"
     },

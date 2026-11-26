@@ -1,10 +1,10 @@
 import { ChangeDetectorRef, Component, DestroyRef, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-
 import { LanguageService } from '../../services/language.service';
 
 type ContactField = 'name' | 'email' | 'subject' | 'message';
+type ContactAlert = 'success' | 'error' | null;
 
 const ALERT_VISIBLE_MS = 5000;
 const ALERT_EXIT_MS = 400;
@@ -24,16 +24,11 @@ export class ContactComponent {
     private readonly changeDetectorRef = inject(ChangeDetectorRef);
     private readonly destroyRef = inject(DestroyRef);
 
+    private readonly formspreeUrl = 'https://formspree.io/f/xeaobvrb';
     private alertHideTimeout: ReturnType<typeof setTimeout> | null = null;
     private alertCloseTimeout: ReturnType<typeof setTimeout> | null = null;
 
-    constructor() {
-        this.destroyRef.onDestroy(() => this.clearAlertTimers());
-    }
-
-    toLocalePhone(phone: string): string {
-        return this.languageService.toLocaleNumber(phone);
-    }
+    readonly fields: ContactField[] = ['name', 'email', 'subject', 'message'];
 
     readonly contactForm = this.formBuilder.nonNullable.group({
         name: ['', Validators.required],
@@ -43,11 +38,16 @@ export class ContactComponent {
     });
 
     submitting = false;
-    submitted = false;
-    error = false;
+    alert: ContactAlert = null;
     alertClosing = false;
 
-    private readonly formspreeUrl = 'https://formspree.io/f/xeaobvrb';
+    constructor() {
+        this.destroyRef.onDestroy(() => this.clearAlertTimers());
+    }
+
+    toLocalePhone(phone: string): string {
+        return this.languageService.toLocaleNumber(phone);
+    }
 
     isInvalid(field: ContactField): boolean {
         const control = this.contactForm.controls[field];
@@ -70,66 +70,66 @@ export class ContactComponent {
         return '';
     }
 
-    describedBy(field: ContactField): string | null {
-        return this.isInvalid(field) ? `contact-${field}-error` : null;
-    }
-
     onSubmit(): void {
-        if (this.contactForm.invalid || this.submitting) {
+        if (this.submitting) {
+            return;
+        }
+
+        if (this.contactForm.invalid) {
             this.contactForm.markAllAsTouched();
             this.focusFirstInvalid();
             return;
         }
 
         this.submitting = true;
-        this.submitted = false;
-        this.error = false;
+        this.alert = null;
         this.alertClosing = false;
         this.clearAlertTimers();
 
-        this.http.post(this.formspreeUrl, this.contactForm.getRawValue(), {
-            headers: {
-                Accept: 'application/json'
+        this.http.post(
+            this.formspreeUrl,
+            this.contactForm.getRawValue(),
+            {
+                headers: {
+                    Accept: 'application/json'
+                }
             }
-        }).subscribe({
+        ).subscribe({
             next: () => {
                 this.submitting = false;
-                this.submitted = true;
-                this.error = false;
-                this.alertClosing = false;
-
                 this.contactForm.reset();
-
-                this.changeDetectorRef.markForCheck();
-                this.scheduleAlertDismiss();
+                this.showAlert('success');
             },
             error: () => {
                 this.submitting = false;
-                this.submitted = false;
-                this.error = true;
-                this.alertClosing = false;
-
-                this.changeDetectorRef.markForCheck();
-                this.scheduleAlertDismiss();
+                this.showAlert('error');
             }
         });
     }
 
     private focusFirstInvalid(): void {
-        const fields: ContactField[] = ['name', 'email', 'subject', 'message'];
-        const firstInvalid = fields.find(field => this.contactForm.controls[field].invalid);
+        const firstInvalid = this.fields.find(
+            field => this.contactForm.controls[field].invalid
+        );
 
-        if (!firstInvalid) {
-            return;
+        if (firstInvalid) {
+            document.getElementById(`contact-${firstInvalid}`)?.focus();
         }
+    }
 
-        document.getElementById(`contact-${firstInvalid}`)?.focus();
+    private showAlert(type: Exclude<ContactAlert, null>): void {
+        this.alert = type;
+        this.alertClosing = false;
+        this.changeDetectorRef.markForCheck();
+        this.scheduleAlertDismiss();
     }
 
     private scheduleAlertDismiss(): void {
         this.clearAlertTimers();
 
-        const reducedMotion = this.prefersReducedMotion();
+        const reducedMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
 
         this.alertHideTimeout = setTimeout(() => {
             if (reducedMotion) {
@@ -147,8 +147,7 @@ export class ContactComponent {
     }
 
     private dismissAlert(): void {
-        this.submitted = false;
-        this.error = false;
+        this.alert = null;
         this.alertClosing = false;
         this.changeDetectorRef.markForCheck();
     }
@@ -163,9 +162,5 @@ export class ContactComponent {
             clearTimeout(this.alertCloseTimeout);
             this.alertCloseTimeout = null;
         }
-    }
-
-    private prefersReducedMotion(): boolean {
-        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     }
 }

@@ -1,0 +1,107 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hossein Behdani is a Front-End Developer focused on building modern, accessible, and maintainable web interfaces.">
+    <meta name="keywords" content="Hossein Behdani, Front-End Developer, Angular Developer, React Developer, Web Developer">
+    <meta name="author" content="Hossein Behdani">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050816">
+    <meta name="google-site-verification" content="Tw_KnWBb4yCX3u1_0PHf0nvZ5_Ylrr44g_Ug7VivnNc">
+    <title>حسین بهدانی | توسعه‌دهنده فرانت‌اند</title>
+    <link rel="canonical" href="https://portfolio-one-teal-25.vercel.app/react/">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=5">
+    <link rel="icon" type="image/x-icon" sizes="48x48" href="/favicon.ico?v=5">
+    <link rel="apple-touch-icon" href="/assets/images/Logo.webp">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="ard" type="application/json" href=".well-known/ard.json">
+    <link rel="preload" href="/assets/fonts/vazirmatn/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/images/My%20photo%20hero.webp" as="image" fetchpriority="high">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fa_IR">
+    <meta property="og:site_name" content="Hossein Behdani Portfolio">
+    <meta property="og:title" content="حسین بهدانی | توسعه‌دهنده فرانت‌اند">
+    <meta property="og:description" content="Modern front-end portfolio showcasing projects, skills, and experience.">
+    <meta property="og:url" content="https://portfolio-one-teal-25.vercel.app/react/">
+    <meta property="og:image" content="https://portfolio-one-teal-25.vercel.app/assets/images/My%20photo%20hero.webp">
+    <meta property="og:image:alt" content="Hossein Behdani - Front-End Developer">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="حسین بهدانی | توسعه‌دهنده فرانت‌اند">
+    <meta name="twitter:description" content="Modern front-end portfolio showcasing projects, skills, and experience.">
+    <meta name="twitter:image" content="https://portfolio-one-teal-25.vercel.app/assets/images/My%20photo%20hero.webp">
+    <script id="portfolio-json-ld" type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hossein Behdani",
+        "alternateName": "حسین بهدانی",
+        "url": "https://portfolio-one-teal-25.vercel.app/react/",
+        "image": "https://portfolio-one-teal-25.vercel.app/assets/images/My%20photo%20hero.webp",
+        "jobTitle": "Front-End Developer",
+        "email": "mailto:behdanihosain@gmail.com",
+        "sameAs": [
+            "https://t.me/Hos3sein_B",
+            "https://www.instagram.com/hosein_behdani/",
+            "https://github.com/HosseinBehdani"
+        ],
+        "knowsAbout": [
+            "Angular",
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Front-End Development"
+        ]
+    }
+    </script>
+    <script>
+        (() => {
+            try {
+                const language = localStorage.getItem('language');
+                const validLanguage = language === 'fa' || language === 'en' ? language : 'fa';
+
+                document.documentElement.lang = validLanguage;
+                document.documentElement.dir = validLanguage === 'fa' ? 'rtl' : 'ltr';
+                document.title = validLanguage === 'fa'
+                    ? 'حسین بهدانی | توسعه‌دهنده فرانت‌اند'
+                    : 'Hossein Behdani | Front-End Developer';
+
+                const theme = localStorage.getItem('theme');
+                const validTheme = theme === 'light' || theme === 'dark'
+                    ? theme
+                    : window.matchMedia('(prefers-color-scheme: dark)').matches
+                        ? 'dark'
+                        : 'light';
+
+                document.documentElement.classList.toggle('dark', validTheme === 'dark');
+            } catch {
+                document.documentElement.lang = 'fa';
+                document.documentElement.dir = 'rtl';
+                document.title = 'حسین بهدانی | توسعه‌دهنده فرانت‌اند';
+            }
+        })();
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            window.dataLayer.push(arguments);
+        }
+        window.addEventListener('load', () => {
+            window.setTimeout(() => {
+                const script = document.createElement('script');
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-E9M9JGRZ4S';
+                script.async = true;
+                script.onload = () => {
+                    gtag('js', new Date());
+                    gtag('config', 'G-E9M9JGRZ4S');
+                };
+                document.head.appendChild(script);
+            }, 2500);
+        });
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

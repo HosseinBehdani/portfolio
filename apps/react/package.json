@@ -1,0 +1,33 @@
+{
+    "name": "@portfolio/react-app",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "pnpm -w sync:assets && vite",
+        "build": "pnpm -w sync:assets && tsc -b && vite build",
+        "preview": "vite preview",
+        "typecheck": "tsc -b --pretty false"
+    },
+    "dependencies": {
+        "@portfolio/data": "workspace:*",
+        "@portfolio/design-system": "workspace:*",
+        "@portfolio/translations": "workspace:*",
+        "@portfolio/types": "workspace:*",
+        "@portfolio/utils": "workspace:*",
+        "aos": "2.3.4",
+        "react": "19.3.1",
+        "react-dom": "19.3.1"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "4.3.3",
+        "@types/aos": "3.0.8",
+        "@types/node": "^26.6.6",
+        "@types/react": "^19.3.0",
+        "@types/react-dom": "^19.3.0",
+        "@vitejs/plugin-react": "6.3.0",
+        "tailwindcss": "4.3.3",
+        "typescript": "6.0.3",
+        "vite": "8.1.5"
+    }
+}

@@ -91,96 +91,27 @@
                     <label for="contact-name" class="mb-1 block text-xs font-medium text-slate-600 dark:text-slate-300">
                         {{ languageService.translations.contact.nameLabel }}
                     </label>
-                    <input
-                        id="contact-name"
-                        type="text"
-                        formControlName="name"
-                        autocomplete="name"
-                        required
-                        [placeholder]="languageService.translations.contact.namePlaceholder"
-                        [attr.aria-invalid]="isInvalid('name')"
-                        [attr.aria-describedby]="describedBy('name')"
-                        [class.contact-field-invalid]="isInvalid('name')"
-                        class="contact-field w-full px-3 py-2.5 rounded-md border border-[#12345A] dark:border-[#1D4F7A] bg-transparent text-sm text-slate-900 dark:text-white placeholder:text-slate-400"
-                    >
-                    @if (isInvalid('name')) {
-                        <p id="contact-name-error" class="contact-field-error">
-                            {{ fieldError('name') }}
-                        </p>
-                    }
+                    <input id="contact-name" type="text" formControlName="name" autocomplete="name" required [placeholder]="isInvalid('name') ? fieldError('name') : languageService.translations.contact.namePlaceholder" [attr.aria-invalid]="isInvalid('name')" [class.contact-field-invalid]="isInvalid('name')" [class.contact-field-error-placeholder]="isInvalid('name')" class="contact-field w-full px-3 py-2.5 rounded-md border border-[#12345A] dark:border-[#1D4F7A] bg-transparent text-sm text-slate-900 dark:text-white placeholder:text-slate-400">
                 </div>
                 <div class="col-span-1">
                     <label for="contact-email" class="mb-1 block text-xs font-medium text-slate-600 dark:text-slate-300">
                         {{ languageService.translations.contact.emailLabel }}
                     </label>
-                    <input
-                        id="contact-email"
-                        type="email"
-                        formControlName="email"
-                        autocomplete="email"
-                        inputmode="email"
-                        required
-                        [placeholder]="languageService.translations.contact.emailPlaceholder"
-                        [attr.aria-invalid]="isInvalid('email')"
-                        [attr.aria-describedby]="describedBy('email')"
-                        [class.contact-field-invalid]="isInvalid('email')"
-                        class="contact-field w-full px-3 py-2.5 rounded-md border border-[#12345A] dark:border-[#1D4F7A] bg-transparent text-sm text-slate-900 dark:text-white placeholder:text-slate-400"
-                    >
-                    @if (isInvalid('email')) {
-                        <p id="contact-email-error" class="contact-field-error">
-                            {{ fieldError('email') }}
-                        </p>
-                    }
+                    <input id="contact-email" type="email" formControlName="email" autocomplete="email" inputmode="email" required [placeholder]="isInvalid('email') ? fieldError('email') : languageService.translations.contact.emailPlaceholder" [attr.aria-invalid]="isInvalid('email')" [class.contact-field-invalid]="isInvalid('email')" [class.contact-field-error-placeholder]="isInvalid('email')" class="contact-field w-full px-3 py-2.5 rounded-md border border-[#12345A] dark:border-[#1D4F7A] bg-transparent text-sm text-slate-900 dark:text-white placeholder:text-slate-400">
                 </div>
                 <div class="col-span-2">
                     <label for="contact-subject" class="mb-1 block text-xs font-medium text-slate-600 dark:text-slate-300">
                         {{ languageService.translations.contact.subjectLabel }}
                     </label>
-                    <input
-                        id="contact-subject"
-                        type="text"
-                        formControlName="subject"
-                        autocomplete="off"
-                        required
-                        [placeholder]="languageService.translations.contact.subjectPlaceholder"
-                        [attr.aria-invalid]="isInvalid('subject')"
-                        [attr.aria-describedby]="describedBy('subject')"
-                        [class.contact-field-invalid]="isInvalid('subject')"
-                        class="contact-field w-full px-3 py-2.5 rounded-md border border-[#12345A] dark:border-[#1D4F7A] bg-transparent text-sm text-slate-900 dark:text-white placeholder:text-slate-400"
-                    >
-                    @if (isInvalid('subject')) {
-                        <p id="contact-subject-error" class="contact-field-error">
-                            {{ fieldError('subject') }}
-                        </p>
-                    }
+                    <input id="contact-subject" type="text" formControlName="subject" autocomplete="off" required [placeholder]="isInvalid('subject') ? fieldError('subject') : languageService.translations.contact.subjectPlaceholder" [attr.aria-invalid]="isInvalid('subject')" [class.contact-field-invalid]="isInvalid('subject')" [class.contact-field-error-placeholder]="isInvalid('subject')" class="contact-field w-full px-3 py-2.5 rounded-md border border-[#12345A] dark:border-[#1D4F7A] bg-transparent text-sm text-slate-900 dark:text-white placeholder:text-slate-400">
                 </div>
                 <div class="col-span-2">
                     <label for="contact-message" class="mb-1 block text-xs font-medium text-slate-600 dark:text-slate-300">
                         {{ languageService.translations.contact.messageLabel }}
                     </label>
-                    <textarea
-                        id="contact-message"
-                        rows="5"
-                        formControlName="message"
-                        required
-                        [placeholder]="languageService.translations.contact.messagePlaceholder"
-                        [attr.aria-invalid]="isInvalid('message')"
-                        [attr.aria-describedby]="describedBy('message')"
-                        [class.contact-field-invalid]="isInvalid('message')"
-                        class="contact-field w-full resize-none px-3 py-2.5 rounded-md border border-[#12345A] dark:border-[#1D4F7A] bg-transparent text-sm text-slate-900 dark:text-white placeholder:text-slate-400"
-                    ></textarea>
-                    @if (isInvalid('message')) {
-                        <p id="contact-message-error" class="contact-field-error">
-                            {{ fieldError('message') }}
-                        </p>
-                    }
+                    <textarea id="contact-message" rows="5" formControlName="message" required [placeholder]="isInvalid('message') ? fieldError('message') : languageService.translations.contact.messagePlaceholder" [attr.aria-invalid]="isInvalid('message')" [class.contact-field-invalid]="isInvalid('message')" [class.contact-field-error-placeholder]="isInvalid('message')" class="contact-field w-full resize-none px-3 py-2.5 rounded-md border border-[#12345A] dark:border-[#1D4F7A] bg-transparent text-sm text-slate-900 dark:text-white placeholder:text-slate-400"></textarea>
                 </div>
-                <button
-                    type="submit"
-                    [disabled]="submitting"
-                    [attr.aria-busy]="submitting"
-                    class="contact-submit col-span-2 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md bg-purple-600 text-sm lg:text-[15px] cursor-pointer font-semibold text-white disabled:opacity-60 disabled:cursor-not-allowed"
-                >
+                <button type="submit" [disabled]="submitting" [attr.aria-busy]="submitting" class="contact-submit col-span-2 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md bg-purple-600 text-sm lg:text-[15px] cursor-pointer font-semibold text-white disabled:opacity-60 disabled:cursor-not-allowed">
                     @if (submitting) {
                         {{ languageService.translations.contact.submitting }}
                     } @else {
@@ -191,18 +122,18 @@
         </div>
     </div>
 </div>
-@if (submitted || error) {
+@if (alert) {
     <div
         class="contact-alert"
-        [class.contact-alert-error]="error"
-        [class.contact-alert-success]="submitted"
+        [class.contact-alert-error]="alert === 'error'"
+        [class.contact-alert-success]="alert === 'success'"
         [class.contact-alert-closing]="alertClosing"
-        [attr.role]="error ? 'alert' : 'status'"
-        [attr.aria-live]="error ? 'assertive' : 'polite'"
+        [attr.role]="alert === 'error' ? 'alert' : 'status'"
+        [attr.aria-live]="alert === 'error' ? 'assertive' : 'polite'"
         aria-atomic="true"
     >
         <span class="contact-alert-icon" aria-hidden="true">
-            @if (submitted) {
+            @if (alert === 'success') {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <path d="m5 12 4 4L19 6"></path>
                 </svg>
@@ -215,11 +146,7 @@
             }
         </span>
         <span class="contact-alert-message">
-            @if (submitted) {
-                {{ languageService.translations.contact.successMessage }}
-            } @else {
-                {{ languageService.translations.contact.errorMessage }}
-            }
+            {{ alert === 'success' ? languageService.translations.contact.successMessage : languageService.translations.contact.errorMessage }}
         </span>
         <span class="contact-alert-timer" aria-hidden="true"></span>
     </div>

@@ -1,10 +1,8 @@
 import { Injectable, signal } from '@angular/core';
-
 import fa from '@portfolio/translations/fa';
 import en from '@portfolio/translations/en';
-
 import type { Translation } from '@portfolio/types';
-import { toEnglishDigits, toPersianDigits } from '../utils/persian-digits';
+import { toEnglishDigits, toPersianDigits } from '@portfolio/utils';
 
 export type Language = 'fa' | 'en';
 
@@ -67,9 +65,11 @@ export class LanguageService {
 
     private applyLanguage(lang: Language): void {
         document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'fa'
-            ? 'rtl'
-            : 'ltr';
+        document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+
+        document.title = lang === 'fa'
+            ? 'حسین بهدانی | توسعه‌دهنده فرانت‌اند'
+            : 'Hossein Behdani | Front-End Developer';
     }
 
     toLocaleNumber(value: number | string): string {

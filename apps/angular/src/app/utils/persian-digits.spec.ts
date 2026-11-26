@@ -1,4 +1,4 @@
-import { toEnglishDigits, toPersianDigits } from './persian-digits';
+import { toEnglishDigits, toPersianDigits } from '@portfolio/utils';
 
 describe('digit localization', () => {
     it('converts Persian and Arabic-Indic digits to English digits', () => {

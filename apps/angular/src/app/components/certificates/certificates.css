@@ -42,8 +42,4 @@
         background: rgba(139, 92, 246, 0.65);
     }
 
-    :host-context(html[dir="rtl"]) .certificate-list {
-        padding-inline-start: 0.3rem;
-        padding-inline-end: 0;
-    }
 }
