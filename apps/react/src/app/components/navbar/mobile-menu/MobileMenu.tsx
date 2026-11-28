@@ -268,11 +268,10 @@ function MobileMenu({ isOpen, onClose, angularAppUrl }: MobileMenuProps) {
                 </span>
                 <div className="mt-5 flex gap-3">
                     <span
-                        aria-label="React"
-                        aria-current="page"
                         title="React - نسخه فعلی"
                         className="relative flex h-14 flex-1 items-center justify-center rounded-xl border border-cyan-400/50 bg-cyan-400/10 backdrop-blur text-[#61DAFB] shadow-[0_0_20px_rgba(97,218,251,0.15)] cursor-default after:absolute after:bottom-1 after:size-1.5 after:rounded-full after:bg-cyan-400 after:shadow-[0_0_8px_rgba(97,218,251,0.8)]"
                     >
+                        <span className="sr-only">React - نسخه فعلی</span>
                         <svg className="size-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <g stroke="currentColor" strokeWidth="1.2">
                                 <ellipse cx="12" cy="12" rx="10.5" ry="4" />
@@ -283,13 +282,12 @@ function MobileMenu({ isOpen, onClose, angularAppUrl }: MobileMenuProps) {
                         </svg>
                     </span>
                     <span
-                        aria-label="Next.js"
-                        aria-disabled="true"
                         title="Next.js - به‌زودی"
                         className="flex h-14 flex-1 items-center justify-center rounded-xl border backdrop-blur text-slate-400 dark:text-slate-500 opacity-40 cursor-not-allowed bg-gray-100 dark:bg-white/5 border-gray-200 dark:border-white/10"
                     >
+                        <span className="sr-only">Next.js - به‌زودی</span>
                         <svg className="size-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 600 600" aria-hidden="true">
-                            <path d="M466.6 549.5A300.1 300.1 0 0 1 0 300C0 134.4 134.4 0 300 0a300.1 300.1 0 0 1 198.3 525L230.5 180H180v239.9h40.4V231.3zM383.3336l40 51.5V180h-40z" />
+                            <path d="M466.6 549.5A300.1 300.1 0 0 1 0 300C0 134.4 134.4 0 300 0a300.1 300.1 0 0 1 198.3 525L230.5 180H180v239.9h40.4V231.3zM383.3 336l40 51.5V180h-40z" />
                         </svg>
                     </span>
                     <a

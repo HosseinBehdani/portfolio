@@ -16,7 +16,7 @@
     <link rel="icon" type="image/x-icon" sizes="48x48" href="favicon.ico?v=4">
     <link rel="apple-touch-icon" href="/assets/images/Logo.webp">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="ard" type="application/json" href=".well-known/ard.json">
+    <link rel="ard" type="application/json" href="/.well-known/ard.json">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fa_IR">
     <meta property="og:url" content="https://portfolio-one-teal-25.vercel.app/angular/">
@@ -72,7 +72,6 @@
                 document.title = lang === 'fa'
                     ? 'حسین بهدانی | توسعه‌دهنده فرانت‌اند'
                     : 'Hossein Behdani | Front-End Developer';
-
                 var theme = localStorage.getItem('theme');
                 if (theme !== 'light' && theme !== 'dark') {
                     theme = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -90,20 +89,34 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
-            dataLayer.push(arguments);
+            window.dataLayer.push(arguments);
         }
-        window.addEventListener('load', function () {
-            window.setTimeout(function () {
+        (function () {
+            var analyticsLoaded = false;
+            var fallbackTimer;
+            function loadAnalytics() {
+                if (analyticsLoaded) {
+                    return;
+                }
+                analyticsLoaded = true;
+                window.clearTimeout(fallbackTimer);
+                window.removeEventListener('pointerdown', loadAnalytics);
+                window.removeEventListener('keydown', loadAnalytics);
+                window.removeEventListener('scroll', loadAnalytics);
+                window.removeEventListener('touchstart', loadAnalytics);
+                gtag('js', new Date());
+                gtag('config', 'G-E9M9JGRZ4S');
                 var script = document.createElement('script');
                 script.src = 'https://www.googletagmanager.com/gtag/js?id=G-E9M9JGRZ4S';
                 script.async = true;
-                script.onload = function () {
-                    gtag('js', new Date());
-                    gtag('config', 'G-E9M9JGRZ4S');
-                };
                 document.head.appendChild(script);
-            }, 2500);
-        });
+            }
+            window.addEventListener('pointerdown', loadAnalytics, { once: true, passive: true });
+            window.addEventListener('keydown', loadAnalytics, { once: true });
+            window.addEventListener('scroll', loadAnalytics, { once: true, passive: true });
+            window.addEventListener('touchstart', loadAnalytics, { once: true, passive: true });
+            fallbackTimer = window.setTimeout(loadAnalytics, 10000);
+        })();
     </script>
 </head>
 <body>

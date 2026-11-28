@@ -9,15 +9,14 @@ import {
 } from '@angular/core';
 import { statusStats } from '@portfolio/data';
 import type { StatusStat, StatusStatId } from '@portfolio/types';
-import { CountUp } from 'countup.js';
-
+import type { CountUp as CountUpInstance } from 'countup.js';
 import { LanguageService } from '../../services/language.service';
 
 const COUNT_UP_DURATION_SECONDS = 5;
 const COUNT_UP_START_VALUE = 0;
 const INTERSECTION_THRESHOLD = 0.2;
 
-type StatPhase = 'pending' | 'animating' | 'done';
+type StatPhase = 'pending' | 'loading' | 'animating' | 'done';
 
 type StatTarget = {
     element: HTMLElement;
@@ -52,7 +51,7 @@ export class StatusComponent implements AfterViewInit {
     private destroyed = false;
     private mutationObserver: MutationObserver | null = null;
     private intersectionObserver: IntersectionObserver | null = null;
-    private countUps: CountUp[] = [];
+    private countUps: CountUpInstance[] = [];
 
     constructor() {
         afterRenderEffect({
@@ -146,7 +145,7 @@ export class StatusComponent implements AfterViewInit {
             }
 
             this.disconnectObservers();
-            this.startCountUps();
+            void this.startCountUps();
             return true;
         };
 
@@ -157,6 +156,7 @@ export class StatusComponent implements AfterViewInit {
         this.mutationObserver = new MutationObserver(() => {
             tryStart();
         });
+
         this.mutationObserver.observe(host, {
             attributes: true,
             attributeFilter: ['class', 'data-aos']
@@ -167,58 +167,77 @@ export class StatusComponent implements AfterViewInit {
                 tryStart();
             }
         }, { threshold: INTERSECTION_THRESHOLD });
+
         this.intersectionObserver.observe(host);
     }
 
-    private startCountUps(): void {
+    private async startCountUps(): Promise<void> {
         if (this.destroyed || this.phase !== 'pending') {
             return;
         }
 
-        const stats = this.statTargets();
+        this.phase = 'loading';
 
-        if (stats.length === 0) {
-            return;
-        }
+        try {
+            const { CountUp } = await import('countup.js');
 
-        this.phase = 'animating';
-        let remaining = stats.length;
-        const instances: CountUp[] = [];
-
-        for (const stat of stats) {
-            const countUp = new CountUp(stat.element, stat.endVal, {
-                duration: COUNT_UP_DURATION_SECONDS,
-                startVal: COUNT_UP_START_VALUE,
-                useGrouping: false,
-                formattingFn: value => stat.format(value)
-            });
-
-            if (countUp.error) {
-                remaining -= 1;
-                stat.element.textContent = stat.format(stat.endVal);
-                continue;
+            if (this.destroyed || this.phase !== 'loading') {
+                return;
             }
 
-            instances.push(countUp);
-            countUp.start(() => {
-                remaining -= 1;
+            const stats = this.statTargets();
 
-                if (this.destroyed || remaining > 0) {
-                    return;
+            if (stats.length === 0) {
+                this.phase = 'done';
+                return;
+            }
+
+            this.phase = 'animating';
+
+            let remaining = stats.length;
+            const instances: CountUpInstance[] = [];
+
+            for (const stat of stats) {
+                const countUp = new CountUp(stat.element, stat.endVal, {
+                    duration: COUNT_UP_DURATION_SECONDS,
+                    startVal: COUNT_UP_START_VALUE,
+                    useGrouping: false,
+                    formattingFn: value => stat.format(value)
+                });
+
+                if (countUp.error) {
+                    remaining -= 1;
+                    stat.element.textContent = stat.format(stat.endVal);
+                    continue;
                 }
 
+                instances.push(countUp);
+
+                countUp.start(() => {
+                    remaining -= 1;
+
+                    if (this.destroyed || remaining > 0) {
+                        return;
+                    }
+
+                    this.phase = 'done';
+                    this.destroyCountUps();
+                    this.writeValues('end');
+                });
+            }
+
+            this.countUps = instances;
+
+            if (remaining <= 0) {
                 this.phase = 'done';
                 this.destroyCountUps();
                 this.writeValues('end');
-            });
-        }
-
-        this.countUps = instances;
-
-        if (remaining <= 0) {
-            this.phase = 'done';
-            this.destroyCountUps();
-            this.writeValues('end');
+            }
+        } catch {
+            if (!this.destroyed) {
+                this.phase = 'done';
+                this.writeValues('end');
+            }
         }
     }
 
